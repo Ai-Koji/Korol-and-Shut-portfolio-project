@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&family=Roboto&display=swap');
+
+body {
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    padding: 0px;
+    margin: 0;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+.nav-button {
+    height: 70%;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+nav img {
+    height: 100%;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.nav-logo {
+    width: 10%;
+}
+
+nav a:hover {
+    color: rgb(255, 170, 22);
+}
+
+.main-carousel {
+    height: 80vw;
+}
+
+.main-carousel img{
+    width: 100%;
+    opacity: 0.42;
+}
+
+.carousel-opened {
+    animation: carousel-opening 3s  1;
+}
+
+.hidden {
+    display: none;
+}
+
+.carousel-hidden {
+    animation-fill-mode: forwards;
+    animation: carousel-hidding 3s 1;
+}
+
+@keyframes carousel-opening {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.425;
+    }
+}
+
+@keyframes carousel-hidding {
+    0% {
+        display: block;
+        opacity: 0.425;
+    }
+
+    99% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 0;
+        display: none;
+        pointer-events: none;
+    }
+}
+
+.main-carousel h1 {
+    color: rgb(255,203,112);
+    font-family: 'Old Standard TT', serif;
+    font-size: 40px;
+    width: 100%;
+    position: absolute;
+    top: 50vw;
+    text-align: center;
+    z-index: 3;
+}
+
+.block {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.music-player {
+    width: 50%;
+    height: 500px;
+    border-radius: 10px;
+    background-color: aqua;
+    margin: 2%;
+}
+
+.music-text {
+    width: 30%;
+    border-radius: 10px;
+    background-color: aqua;
+    margin: 2%;
+}
+
+.images {
+    width: 25%;
+    margin: 2%;
+    margin-left: 10%;
+}
+
+.images img{
+    width: 100%;
+}
+
+.content {
+    width: 70%;
+    margin: 5%;
+    margin-right: 7%;
+}
