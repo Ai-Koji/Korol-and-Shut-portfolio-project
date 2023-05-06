@@ -31,11 +31,19 @@
         </section>
         <section class="block">
             <div class="music-player">
-                <!-- <audio controls>
-                    <source src="music.mp3" type="audio/mpeg">
-                    <source src="music.ogg" type="audio/ogg">
-                </audio> -->
+                <div id="player">
+                    <img src="images/kak_doma.jpeg" alt="Картинка композиции" />
+                    <h1>Название композиции</h1>
+                    <audio controls>
+                      <source src="path/to/audio.mp3" type="audio/mpeg" />
+                    </audio>
+                    <div class="change">
+                        <button id="prev"><span><img src="images/arrow-prev.svg" alt=""></span></button>
+                        <button id="next"><span><img src="images/arrow-next.svg" alt=""></span></button>
+                    </div>
+                </div>
             </div>
+            
             <div class="music-text"><p><!--текст песни--></p></div>
         </section>
 
@@ -51,6 +59,10 @@
                 </p>
             </div>   
         </section>
+
+        
+        <section class="film"></section>
+
         <section class="discography-carousel">
             <div class="carousel">
                 <div>
@@ -60,7 +72,6 @@
                 </div>
             </div>
         </section>
-        <section class="film"></section>
         <section class="story"></section>
         <section class="participants"></section>
     </main>

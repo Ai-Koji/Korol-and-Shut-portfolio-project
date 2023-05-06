@@ -1,4 +1,8 @@
 
+
+
+
+// main-carousel
 let slideIdOfMainCarousel = 1;
 const maxIdOfMainCarousel = 5;
 
@@ -29,3 +33,94 @@ function showSlideMain() {
 let mainCarousel = document.querySelector('.main-carousel');
 
 mainCarousel.addEventListener("click", () => {showSlideMain()});
+
+
+
+// плеер
+const player = document.querySelector("#player audio");
+const title = document.querySelector("#player h1");
+const image = document.querySelector("#player img");
+const musicText = document.querySelector(".music-text p");
+
+const songs = [
+  {
+    title: "лесник",
+    image: "images/korol-i-shut.jpeg",
+    audio: "audio/lesnik.mp3",
+    text: "Текст песни 2",
+  },  
+  {
+    title: "Прыгну со скалы",
+    image: "images/acustic.jpeg",
+    audio: "audio/scala.mp3",
+    text: "Текст песни 2",
+  },
+  {
+    title: "Джокер",
+    image: "images/prodaves.jpeg",
+    audio: "audio/djoker.mp3",
+    text: "Текст песни 3",
+  },
+  {
+    title: "Кукла колдуна",
+    image: "images/acustic.jpeg",
+    audio: "audio/cucla.mp3",
+    text: "Текст песни 2",
+  },
+  {
+    title: "Валет и дама",
+    image: "images/korol-i-shut.jpeg",
+    audio: "audio/valet-i-dama.mp3",
+    text: "Текст песни 3",
+  }
+];
+
+let currentSong = 0;
+
+function loadSong() {
+  title.innerText = songs[currentSong].title;
+  image.src = songs[currentSong].image;
+  player.src = songs[currentSong].audio;
+  musicText.innerText = songs[currentSong].text;
+}
+
+function playSong() {
+  player.play();
+  document.querySelector("#play").innerHTML = "⏸";
+}
+
+function pauseSong() {
+  player.pause();
+  document.querySelector("#play").innerHTML = "▶️";
+}
+
+function prevSong() {
+  currentSong--;
+  if (currentSong < 0) {
+    currentSong = songs.length - 1;
+  }
+  loadSong();
+  playSong();
+}
+
+function nextSong() {
+  currentSong++;
+  if (currentSong > songs.length - 1) {
+    currentSong = 0;
+  }
+  loadSong();
+  playSong();
+}
+
+loadSong();
+
+document.querySelector("#prev").addEventListener("click", prevSong);
+document.querySelector("#next").addEventListener("click", nextSong);
+
+document.addEventListener("keydown", (e) => {
+  if (e.code === "ArrowLeft") {
+    prevSong();
+  } else if (e.code === "ArrowRight") {
+    nextSong();
+  }
+});
