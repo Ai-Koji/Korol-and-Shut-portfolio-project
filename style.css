@@ -61,10 +61,6 @@ nav a:hover {
     animation: carousel-opening 3s  1;
 }
 
-.hidden {
-    display: none;
-}
-
 .carousel-hidden {
     animation-fill-mode: forwards;
     animation: carousel-hidding 3s 1;
@@ -108,14 +104,6 @@ nav a:hover {
     text-align: center;
     z-index: 3;
 }
-
-.block {
-    width: 100%;
-    display: inline-flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-
 
 /* music-player */
 .music-player {
@@ -188,7 +176,21 @@ nav a:hover {
 
 
 /* story */
-.images {
+.block {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.content h1 {
+    color: red;
+    font-family: 'Old Standard TT', serif
+}
+
+
+/* горшок */
+.story .images {
     width: 25%;
     margin: 2%;
     margin-left: 10%;
@@ -198,8 +200,78 @@ nav a:hover {
     width: 100%;
 }
 
-.content {
+.story .content {
     width: 70%;
     margin: 5%;
     margin-right: 7%;
+}
+
+
+/* фильм */
+.film .images {
+    width: 60%;
+    margin: 2%;
+    margin-left: 10%;
+}
+
+.film .content {
+    width: 40%;
+    margin: 5%;
+    margin-right: 7%;
+}
+
+/* карусель дикографии */
+.discography-carousel {
+    padding: 3%;
+    position: relative;
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.three-albums {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    vertical-align: top; 
+}
+
+.three-albums a {
+    display: inline-block;
+    width: auto;
+    margin-right: 500px;
+    border-radius: 5%;
+    margin: 0 5%;
+}
+
+.three-albums a img {
+    width: 20vw;
+    margin: 10px;
+    margin: 0;
+}
+
+
+.discography-carousel button {
+    position: absolute;
+    transform: translateY(-50%);
+    border: none;
+    /* background-color: rgba(0, 0, 0, 0.4); */
+}
+
+.first-button {
+    top: 50%;
+    left: 2%;
+}
+
+.second-button {
+    top: 50%;
+    right: 2%;
+}
+
+
+
+.hidden {
+    display: none;
 }
