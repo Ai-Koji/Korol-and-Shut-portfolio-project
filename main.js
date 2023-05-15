@@ -1,7 +1,4 @@
 
-
-
-
 // main-carousel
 let slideIdOfMainCarousel = 1;
 const maxIdOfMainCarousel = 5;
@@ -33,8 +30,6 @@ function showSlideMain() {
 let mainCarousel = document.querySelector('.main-carousel');
 
 mainCarousel.addEventListener("click", () => {showSlideMain()});
-
-
 
 // плеер
 const player = document.querySelector("#player audio");
@@ -124,3 +119,35 @@ document.addEventListener("keydown", (e) => {
     nextSong();
   }
 });
+
+// карусель альбомов
+
+let discIndex = 1;
+
+function prevDisc(){
+  let elements = document.getElementsByClassName("three-albums");
+
+  if (discIndex == 1){
+    discIndex = 8;
+  }
+  // Пройти циклом по всем элементам и изменить их стиль  
+  discIndex--;
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].style.transform = `translateX(-${100 * (discIndex - 1)}vw)`;
+  }
+}
+
+function nextDisc(){
+  let elements = document.getElementsByClassName("three-albums");
+
+  
+  if (discIndex == 7){
+    discIndex = 0;
+  }
+
+  // Пройти циклом по всем элементам и изменить их стиль
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].style.transform = `translateX(-${100 * discIndex}vw)`;
+  }
+  discIndex++;
+}
