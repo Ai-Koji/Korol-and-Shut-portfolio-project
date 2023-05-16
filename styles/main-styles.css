@@ -13,7 +13,63 @@ a {
     text-decoration: none;
 }
 
+/* scroll up */
+#scroll-to-top {
+    position: fixed;
+    border-radius: 5px;
+    right: 40px;
+    bottom: 40px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 1s, opacity 1s ease;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(255, 170, 22);
+    animation: open-scroll-animation 1s ease;
+}
+
+#scroll-to-top.show {
+opacity: 1;
+visibility: visible;
+}
+
+#scroll-to-top img {
+width: 100%;
+}
+
+.hidden-scroll-animation {
+    animation: hidden-scroll-animation 1s ease;
+}
+  
+@keyframes hidden-scroll-animation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes open-scroll-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    } 
+}
+
 /* navbar */
+nav button {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
 
 nav {
     width: 100%;
@@ -22,9 +78,10 @@ nav {
     font-size: 25px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.01);
+    position: relative;
 }
 
-.nav-button {
+.desktop .nav-button {
     height: 70%;
     padding: 10px;
     margin-left: 30px;
@@ -34,8 +91,12 @@ nav {
     transition: color .2s ease-in-out;
 }
 
-nav img {
-    height: 100%;
+nav .nav-logo img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
 }
 
 .nav-buttons {
@@ -45,12 +106,48 @@ nav img {
 }
 
 .nav-logo {
-    width: 10%;
+    width: 20vw;
+    position: relative;
 }
 
 nav a:hover {
     color: rgb(255, 170, 22);
 }
+
+.mobile {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 90px;
+    text-align: center;
+    display: none;
+	flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 3;
+}
+
+.mobile .nav-button {
+    width: 100%;
+    padding: 10px 0 10px 0;
+    display: inline-block;
+    transition: color .2s ease-in-out;
+}
+
+@media (max-width: 983px) {
+    nav button {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .nav-logo {
+        width: 30vw;
+        position: relative;
+    }
+}
+
 
 /* members */
 .members {
@@ -106,4 +203,8 @@ footer {
 
 footer h4 {
     color: #aaa;
+}
+
+.hidden {
+    display: none;
 }

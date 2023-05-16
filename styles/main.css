@@ -136,11 +136,23 @@
     margin-bottom: 50px;
 }
 
+.content {
+    color: #aaa;
+    line-height: 22px
+}
+
 .content h1 {
     color: #d73916;
     font-family: 'Old Standard TT', serif
 }
 
+.content strong {
+    color: white;
+}
+
+.content a {
+    color: #ff6a49;
+}
 
 /* горшок */
 .story .images {
