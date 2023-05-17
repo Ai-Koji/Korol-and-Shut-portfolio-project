@@ -1,3 +1,42 @@
+// scroll to top
+
+let button = document.getElementById('scroll-to-top');
+button.addEventListener('click', function() {
+    window.location.href = "#";
+});
+
+
+// test2
+let links = document.getElementsByTagName('a');
+for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function(event) {
+    let loader = document.getElementById('loader');
+    loader.classList.add("loader-open-animation");
+    loader.style.display = 'flex';
+
+    event.preventDefault();
+    let url = this.getAttribute('href');
+
+    setTimeout(function() {
+        window.location.href = url;
+    }, 1000);
+    });
+}
+
+
+// loader
+window.addEventListener('load', function() {
+    let loader = document.getElementById('loader');
+    setTimeout(function() {
+        loader.classList.add("loader-hidding-animation")
+    }, 500);
+    setTimeout(function() {
+        loader.style.display = 'none';
+        loader.classList.remove("loader-hidding-animation")
+    }, 1500);
+});
+
+
 // scroll up
 window.onscroll = function() {scrollFunction()};
 

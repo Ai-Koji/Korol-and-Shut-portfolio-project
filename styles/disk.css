@@ -1,0 +1,115 @@
+.blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/* left */
+.left-blocks {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    padding: 1%;
+}
+
+.image {
+    width: 95%;
+    border-radius: 5%;
+    padding: 1%;
+}
+
+.image img {
+    width: 100%;
+}
+
+.about-album h2 {
+    color: #d73916;
+}
+
+.other-albums {
+    width: 95%;
+    padding: 5%;
+}
+
+.other-albums a {
+    padding: 1%;
+    display: inline-block;
+    width: 20%;
+    border-radius: 10px;
+}
+
+.other-albums img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* right */
+.right-blocks {
+    display: flex;
+    flex-direction: column;
+    width: 67.5vw;
+    padding: 1%;
+}
+
+.player {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    font-size: 18px;
+    width: 35%;
+}
+
+.header h2 {
+    margin-top: 3%;
+}
+
+.change-compozition {
+    width: 50%;
+}
+
+.change-compozition button {
+    background: none;
+    border: none;
+}
+
+.composition-list button {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 15px;
+    margin: 2px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #d73916;
+    transition: color .2s ease-in-out;
+}
+
+.composition-list button:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.125);
+}
+
+.composition-list button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.polygraphy {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.polygraphy img {
+    width: 80%;
+    margin-top: 20px;
+}
+
+.composition-list button.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}

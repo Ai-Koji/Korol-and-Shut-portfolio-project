@@ -6,13 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/main-styles.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
     <title>Король и Шут</title>
 </head>
 <body>
+    <!-- загрузка -->
+    <div id="loader">
+        <img src="images/loader_image.jpeg" alt="">
+        <h1>Загрузка...</h1>
+    </div>
 
-    <!-- scroll up -->
-    <a href="#" id="scroll-to-top"><img src="images/arrow-up.svg" alt=""></a>
-    <!--  -->
+    <!-- скрол к наву -->
+    <button href="#" id="scroll-to-top"><img src="images/arrow-up.svg" alt=""></button>
+    
     <header>
         <nav>
             <a href="" class="nav-logo"><img src="images/logo.svg" alt=""></a>
@@ -33,22 +39,24 @@
         </nav>
     </header>
     <main>
+        <!-- карусель с составами Король и шут -->
         <section class="main-carousel">
             <h1><b>Король и Шут</b></h1>
-            <!-- карусель с легендарными составами Король и шут -->
             <img src="images/squad/squad1.jpg" id="MainSlide1" alt="" class="carousel-opened">
             <img src="images/squad/squad2.jpg" id="MainSlide2" alt="" class="carousel-hidden hidden">
             <img src="images/squad/squad3.jpg" id="MainSlide3" alt="" class="carousel-hidden hidden">
             <img src="images/squad/squad4.jpg" id="MainSlide4" alt="" class="carousel-hidden hidden">
             <img src="images/squad/squad5.jpg" id="MainSlide5" alt="" class="carousel-hidden hidden">
         </section>
+
+        <!-- плеер -->
         <section class="block">
             <div class="music-player">
                 <div id="player">
                     <img src="" alt="Картинка композиции" />
                     <h1>Название композиции</h1>
                     <audio controls>
-                      <source src="" type="audio/mpeg" />
+                      <source src="" type="audio/mpeg"/>
                     </audio>
                     <div class="change">
                         <button id="prev"><span><img src="images/arrow-prev.svg" alt=""></span></button>
@@ -56,7 +64,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="music-text"><p><!--текст песни--></p></div>
         </section>
 
@@ -75,6 +82,7 @@
                 </p>            
             </div>   
         </section>
+
         <!-- фильм -->
         <section class="block film">
             <div class="content">
@@ -163,12 +171,12 @@
         <!-- участники группы -->
         <h1 style="color:rgb(255, 170, 22); padding-left: 100px; font-family: 'Old Standard TT', serif">Участники группы</h1>
         <section class="members">
-            <a href="" title="Михаил Горшенев"><img src="images/members/mihail-gorshenev.jpg"></a>
-            <a href="" title="Александр Щиголев"><img src="images/members/aleksandr-shhigolev.jpg" alt=""></a>
-            <a href="" title="Яков Цвиркунов"><img src="images/members/yakov-tsvirkunov.jpg" alt=""></a>
-            <a href="" title="Александр Леонтьев"><img src="images/members/aleksandr-leontev.jpg" alt=""></a>
-            <a href="" title="Павел Сажинов"><img src="images/members/pavel-sazhinov.jpg" alt=""></a>
-            <a href="" title="Сергей Захаров"><img src="images/members/sergey-zaharov.jpg" alt=""></a>
+            <a href="biography/gorshok.html" title="Михаил Горшенев"><img src="images/members/mihail-gorshenev.jpg"></a>
+            <a href="biography/aleksandr-shhigolev.html" title="Александр Щиголев"><img src="images/members/aleksandr-shhigolev.jpg" alt=""></a>
+            <a href="biography/yakov-tsvirkunov.html" title="Яков Цвиркунов"><img src="images/members/yakov-tsvirkunov.jpg" alt=""></a>
+            <a href="biography/aleksandr-leontev.html" title="Александр Леонтьев"><img src="images/members/aleksandr-leontev.jpg" alt=""></a>
+            <a href="biography/pavel-sazhinov.html" title="Павел Сажинов"><img src="images/members/pavel-sazhinov.jpg" alt=""></a>
+            <a href="biography/sergey-zaharov.html" title="Сергей Захаров"><img src="images/members/sergey-zaharov.jpg" alt=""></a>
         </section>
         <a href="all-members.html" class="other-members">ВСЕ УЧАСТНИКИ</a>
     </main>

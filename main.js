@@ -6,7 +6,10 @@ const maxIdOfMainCarousel = 5;
 let mainCarousel = document.querySelector('.main-carousel');
 
 function showSlideMain() {
+    document.removeEventListener('click', showSlideMain);
     // Находим активный слайд и скрываем его
+    console.log('dsadas')
+    mainCarousel.removeEventListener("click", showSlideMain);
     let activeSlide = document.querySelector('#MainSlide' + (slideIdOfMainCarousel)); 
     activeSlide.classList.remove('carousel-opened');
     activeSlide.classList.add('carousel-hidden');
@@ -27,10 +30,11 @@ function showSlideMain() {
       newActiveSlide.classList.remove('hidden');
       newActiveSlide.classList.remove('carousel-hidden');
       newActiveSlide.classList.add('carousel-opened');
-  }, 100);
+      mainCarousel.addEventListener("click", showSlideMain);
+  }, 3100);
 }
 
-mainCarousel.addEventListener("click", () => {showSlideMain()});
+mainCarousel.addEventListener("click", showSlideMain);
 
 // плеер
 const player = document.querySelector("#player audio");
@@ -41,31 +45,31 @@ const musicText = document.querySelector(".music-text p");
 const songs = [
   {
     title: "лесник",
-    image: "images/korol-i-shut.jpeg",
+    image: "images/albums/korol-i-shut.jpg",
     audio: "audio/lesnik.mp3",
     text: "Текст песни 2",
   },  
   {
     title: "Прыгну со скалы",
-    image: "images/acustic.jpeg",
+    image: "images/albums/acoustic.jpg",
     audio: "audio/scala.mp3",
     text: "Текст песни 2",
   },
   {
     title: "Джокер",
-    image: "images/prodaves.jpeg",
+    image: "images/albums/prodavets-koshmarov.jpg",
     audio: "audio/djoker.mp3",
     text: "Текст песни 3",
   },
   {
     title: "Кукла колдуна",
-    image: "images/acustic.jpeg",
+    image: "images/albums/acoustic.jpg",
     audio: "audio/cucla.mp3",
     text: "Текст песни 2",
   },
   {
     title: "Валет и дама",
-    image: "images/korol-i-shut.jpeg",
+    image: "images/albums/korol-i-shut.jpg",
     audio: "audio/valet-i-dama.mp3",
     text: "Текст песни 3",
   }
