@@ -1,0 +1,45 @@
+
+.videos {
+    position: relative;
+}
+
+.videos button {
+    width: 100px;
+    height: 100px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 70px;
+}
+
+.carousel{
+    position: relative;
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 100px;
+}
+
+.carousel * {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    vertical-align: top;
+    animation-fill-mode: forwards;
+    transition: transform .5s ease-in-out;
+}
+
+#prevVideo {
+    left: 0;
+}
+
+
+#nextVideo {
+    right: 0;
+}
