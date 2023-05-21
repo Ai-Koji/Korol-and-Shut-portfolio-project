@@ -269,6 +269,35 @@ footer h4 {
     color: #aaa;
 }
 
+
+/* увеличенное изображение */
+.enlarged-image {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.72);
+  }
+  
+  .enlarged-image img {
+    position: absolute;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #close {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 1vw;
+    right: 1vw;
+    background: rgb(255, 170, 22);
+    border: none;
+  }
+
 .hidden {
     display: none;
 }

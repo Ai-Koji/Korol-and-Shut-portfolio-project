@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/diskography.css">
+    <link rel="stylesheet" href="../styles/disk.css">
     <link rel="stylesheet" href="../styles/main-styles.css">
     <link rel="shortcut icon" href="../images/favicon.ico">
     <title>Собрание</title>
@@ -26,7 +26,7 @@
                 <a href="../discography.html" class="nav-button">Дискография</a>
                 <a href="../biography/gorshok.html" class="nav-button">Горшок</a>
                 <a href="../all-members.html" class="nav-button">Участники</a>
-                <a href="" class="nav-button">Галлерея</a>
+                <a href="../gallery.html" class="nav-button">Галлерея</a>
             </div>
 
             <button><img src="../images/menu.svg" alt="" onclick="OpenCloseNavbar()"></button> <!-- open navbuttons -->
@@ -34,7 +34,7 @@
                 <a href="../discography.html" class="nav-button">Дискография</a>
                 <a href="gorshok.html" class="nav-button">Горшок</a>
                 <a href="../all-members.html" class="nav-button">Участники</a>
-                <a href="" class="nav-button">Галлерея</a>
+                <a href="../gallery.html" class="nav-button">Галлерея</a>
             </div>
         </nav>
     </header>
@@ -59,7 +59,7 @@
 
                 <!-- другие альбомы -->
                 <div class="other-albums">
-                    <a href="discography.html" title="Акустический альбом — 17 песен"><img src="../images/albums/.jpg" alt=""></a>
+                    <a href="discography.html" title="Акустический альбом — 17 песен"><img src="../images/albums/acoustic.jpg" alt=""></a>
                     <a href="discography.html" title="Бунт на корабле — 14 песен"><img src="../images/albums/bunt-na-korable.jpg" alt=""></a>
                     <a href="discography.html" title="Страшные Сказки — 20 песен"><img src="../images/albums/ctrashnyie-skazki.jpg" alt=""></a>
                     <a href="discography.html" title="Ели Мясо Мужики — 19 песен"><img src="../images/albums/eli-myaso-muzhiki.jpg" alt=""></a>
@@ -119,15 +119,22 @@
 
                 <!-- полиграфия(карусель) -->
                 <div class="polygraphy">
-                    <img src="../images/polygraphy/sobranie/1.jpg" id="polygraphy-image">
-                    <img src="../images/polygraphy/sobranie/2.jpg" id="polygraphy-image">
-                    <img src="../images/polygraphy/sobranie/3.jpg" id="polygraphy-image">
-                    <img src="../images/polygraphy/sobranie/4.jpg" id="polygraphy-image">
-                    <img src="../images/polygraphy/sobranie/5.jpg" id="polygraphy-image">
-                    <img src="../images/polygraphy/sobranie/6.jpg" id="polygraphy-image">
+                    <img onclick="EnlargeImage(0)" src="../images/polygraphy/sobranie/1.jpg" id="polygraphy-image">
+                    <img onclick="EnlargeImage(1)" src="../images/polygraphy/sobranie/2.jpg" id="polygraphy-image">
+                    <img onclick="EnlargeImage(2)" src="../images/polygraphy/sobranie/3.jpg" id="polygraphy-image">
+                    <img onclick="EnlargeImage(3)" src="../images/polygraphy/sobranie/4.jpg" id="polygraphy-image">
+                    <img onclick="EnlargeImage(4)" src="../images/polygraphy/sobranie/5.jpg" id="polygraphy-image">
+                    <img onclick="EnlargeImage(5)" src="../images/polygraphy/sobranie/6.jpg" id="polygraphy-image">
                 </div>
             </section>
         </section>
+        
+        <!-- увеличение картинки -->
+        <div class="enlarged-image hidden">
+            <button id="close"><img src="../images/close.svg"></button>
+            <img id="enlarged-image" src="">
+        </div>
+
         <!-- участники группы -->
         <h1 style="color:rgb(255, 170, 22); padding-left: 100px; font-family: 'Old Standard TT', serif">Участники группы</h1>
         <section class="members">
@@ -144,6 +151,6 @@
         <h4>История "Король и Шут"</h4>
     </footer>
     <script src="../main-scripts.js"></script>
-    <script src="../polygraphy.js"></script>
+    <script src="../disk.js"></script>
 </body>
 </html>
