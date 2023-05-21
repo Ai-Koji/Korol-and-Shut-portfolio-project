@@ -1,27 +1,3 @@
-// const carousel = document.querySelector('iframe');
-// const videos = document.querySelectorAll('.videos iframe');
-// const prevBtn = document.querySelector('#prevVideo');
-// const nextBtn = document.querySelector('#nextVideo');
-
-// let carouselWidth = carousel.offsetWidth;
-// let currentIndex = 0;
-
-// prevBtn.addEventListener('click', () => {
-//   if (currentIndex > 0) {
-//     currentIndex--;
-//     carousel.style.transform = `translateX(-${currentIndex * carouselWidth}px)`;
-//   }
-// });
-
-// nextBtn.addEventListener('click', () => {
-//   if (currentIndex < videos.length - 1) {
-//     currentIndex++;
-//     console.log(carousel)
-//     // for (let index; index == carousel.length; index++)
-//     carousel.style.transform = `translateX(-${currentIndex * carouselWidth}px)`;
-//   }
-// });
-
 const carousel = document.querySelector('.carousel');
 const videos = carousel.querySelectorAll('iframe');
 const prevBtn = document.querySelector('#prevVideo');
@@ -34,7 +10,6 @@ const videoTotalWidth = videoWidth + videoMarginRight;
 
 function moveVideos(direction) {
   currentIndex += direction;
-  // let translateX = -((currentIndex * videoTotalWidth) - videoMarginRight);
   if (currentIndex == -1) 
     currentIndex = 5;
   else if (currentIndex == 6) 
@@ -47,6 +22,26 @@ function moveVideos(direction) {
   });
 }
 
-// Add click events to buttons
 prevBtn.addEventListener('click', () => moveVideos(-1));
 nextBtn.addEventListener('click', () => moveVideos(1));
+
+
+// gallery-image
+function EnlargeImage(index) {
+  document.querySelector("#enlarged-image").src = srcList[index];
+  document.querySelector(".enlarged-image").classList.remove('hidden');
+}
+
+function ReduceImage() {
+  document.querySelector(".enlarged-image").classList.add('hidden');
+}
+
+
+let galleryImages = document.querySelectorAll("#image");
+let srcList = [];
+
+
+galleryImages.forEach(galleryImage => {
+  srcList.push(galleryImage.src);
+});
+document.querySelector("#close").addEventListener("click", ReduceImage);

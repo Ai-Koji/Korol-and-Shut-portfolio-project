@@ -76,6 +76,11 @@
     overflow: auto;
 }
 
+.music-text p {
+    padding: 25px;
+    padding-top: 10px;
+}
+
 #player {
     margin: 0 auto;
     padding: 1rem;
