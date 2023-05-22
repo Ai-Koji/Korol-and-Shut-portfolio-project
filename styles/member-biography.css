@@ -21,6 +21,12 @@ h2 {
     margin-left: 0;
 }
 
+@media (max-width:1000px) {
+    .content img {
+        width: 100%;
+    }
+}
+
 .content strong {
     color: white;
 }
@@ -36,3 +42,4 @@ h2 {
     margin: 0 auto;
     line-height: 28px
 }
+
