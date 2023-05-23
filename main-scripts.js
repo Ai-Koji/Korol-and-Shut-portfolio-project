@@ -63,7 +63,7 @@ function scrollToTop() {
 
 document.getElementById("scroll-to-top").addEventListener("click", scrollToTop);
 
-// for mobile nav
+// nav для мобильника
 let isOpen = false;
 
 function OpenCloseNavbar () {

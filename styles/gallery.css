@@ -306,3 +306,12 @@ img:hover + .zoom-icon {
   transform: translate(-50%, -50%) scale(1.5);
 }
 
+figure img {
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+figure img:hover {
+    opacity: 0.4;
+}

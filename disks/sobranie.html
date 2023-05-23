@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="shortcut icon" href="../images/favicon.ico">
     <title>Собрание</title>
 </head>
+
 <body>
     <!-- загрузка -->
     <div id="loader">
@@ -18,7 +20,7 @@
 
     <!-- скрол к наву -->
     <button href="#" id="scroll-to-top"><img src="../images/arrow-up.svg" alt=""></button>
-    
+
     <header>
         <nav>
             <a href="../main.html" class="nav-logo"><img src="../images/logo.svg" alt=""></a>
@@ -29,7 +31,8 @@
                 <a href="../gallery.html" class="nav-button">Галлерея</a>
             </div>
 
-            <button><img src="../images/menu.svg" alt="" onclick="OpenCloseNavbar()"></button> <!-- open navbuttons -->
+            <button><img src="../images/menu.svg" alt="" onclick="OpenCloseNavbar()"></button>
+            <!-- open navbuttons -->
             <div class="mobile" id="">
                 <a href="../discography.html" class="nav-button">Дискография</a>
                 <a href="gorshok.html" class="nav-button">Горшок</a>
@@ -39,7 +42,7 @@
         </nav>
     </header>
     <main>
-        <h1 style="color:rgb(255, 170, 22); padding-left: 100px; font-family: 'Old Standard TT', serif">Собрание</h1>
+        <h1 style="color:rgb(255, 170, 22); padding-left: 100px; font-family: 'Old Standard TT', serif" class="blocks-title">Собрание</h1>
         <section class="blocks">
             <section class="left-blocks">
                 <div class="image">
@@ -49,11 +52,7 @@
                 <div class="about-album">
                     <h2>О релизе</h2>
                     <p>
-                        2000 год
-
-                        «Мистерия звука»
-                        Оформители: Дилан Р. Трой и Александр Р. Новиков
-                        В издании использованы уникальные материалы из коллекции И. И. Петрова
+                        2000 год «Мистерия звука» Оформители: Дилан Р. Трой и Александр Р. Новиков В издании использованы уникальные материалы из коллекции И. И. Петрова
                     </p>
                 </div>
 
@@ -80,7 +79,7 @@
                     <a href="discography.html" title="Жаль нет ружья! — 17 песен"><img src="../images/albums/zhal-net-ruzhya.jpg" alt=""></a>
                 </div>
             </section>
-            
+
             <section class="right-blocks">
                 <!-- композиции и плеер-->
                 <div class="compositions">
@@ -128,7 +127,7 @@
                 </div>
             </section>
         </section>
-        
+
         <!-- увеличение картинки -->
         <div class="enlarged-image hidden">
             <button id="close"><img src="../images/close.svg"></button>
@@ -153,4 +152,5 @@
     <script src="../main-scripts.js"></script>
     <script src="../disk.js"></script>
 </body>
+
 </html>

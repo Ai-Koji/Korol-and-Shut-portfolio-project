@@ -44,3 +44,4 @@ let srcList = [];
 galleryImages.forEach(galleryImage => {
   srcList.push(galleryImage.src);
 });
+document.querySelector("#close").addEventListener("click", ReduceImage);

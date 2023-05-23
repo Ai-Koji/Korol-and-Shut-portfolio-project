@@ -414,7 +414,6 @@ document.addEventListener("keydown", (e) => {
 });
 
 // карусель альбомов
-
 let discIndex = 1;
 
 function prevDisc(){
@@ -423,7 +422,6 @@ function prevDisc(){
   if (discIndex == 1){
     discIndex = 8;
   }
-  // Пройти циклом по всем элементам и изменить их стиль  
   discIndex--;
   for (var i = 0; i < elements.length; i++) {
     elements[i].style.transform = `translateX(-${100 * (discIndex - 1)}vw)`;
@@ -438,7 +436,6 @@ function nextDisc(){
     discIndex = 0;
   }
 
-  // Пройти циклом по всем элементам и изменить их стиль
   for (var i = 0; i < elements.length; i++) {
     elements[i].style.transform = `translateX(-${100 * discIndex}vw)`;
   }
