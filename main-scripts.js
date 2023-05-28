@@ -5,8 +5,6 @@ button.addEventListener('click', function() {
     window.location.href = "#";
 });
 
-
-// test2
 let links = document.getElementsByTagName('a');
 for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function(event) {
@@ -18,6 +16,7 @@ for (let i = 0; i < links.length; i++) {
     let url = this.getAttribute('href');
 
     setTimeout(function() {
+        loader.style.display = 'none';
         window.location.href = url;
     }, 1000);
     });
@@ -32,7 +31,7 @@ window.addEventListener('load', function() {
     }, 500);
     setTimeout(function() {
         loader.style.display = 'none';
-        loader.classList.remove("loader-hidding-animation")
+        loader.classList.remove("loader-hidding-animation");
     }, 1500);
 });
 
