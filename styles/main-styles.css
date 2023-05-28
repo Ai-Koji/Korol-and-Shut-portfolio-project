@@ -495,3 +495,7 @@ footer h4 {
         width: 90%;
     }
 }
+
+.active {
+    color: rgb(255, 170, 22)
+}
