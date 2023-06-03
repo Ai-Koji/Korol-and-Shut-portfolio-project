@@ -202,3 +202,15 @@
         width: 35%;
     }
 }
+
+
+.polygraphy img{
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    cursor: pointer;
+}
+
+.polygraphy img:hover {
+    opacity: 0.4;
+}

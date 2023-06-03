@@ -32,12 +32,12 @@ p {
 }
 
 #loader img {
-    width: 500px;
+    width: 25vw;
     margin-right: 10px;
 }
 
 #loader h1 {
-    font-size: 30px;
+    font-size: 2vw;
     color: rgb(255, 170, 22);
     font-family: 'Old Standard TT', serif;
     padding: 0;
