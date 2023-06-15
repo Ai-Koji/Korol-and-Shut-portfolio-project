@@ -193,6 +193,30 @@ main {
     width: auto;
 }
 
+.directory {
+    display: flex;
+    justify-content: space-between;
+    color: #aaa;
+}
+
+.directory a {
+    color: #aaa;
+    transition: 0.5s;
+}
+
+.directory a:hover {
+    color: #d73916;
+}
+
+.product-parametrs a{
+    color: #aaa;
+    transition: 0.5s;
+}
+
+.product-parametrs a:hover{
+    color: #d73916;
+}
+
 .cards {
     text-align: center;
     margin-top: 5%;
