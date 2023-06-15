@@ -29,6 +29,7 @@ main {
     color: #fff;
     border: none;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .catalogs-button span {
@@ -40,6 +41,11 @@ main {
     display: table-cell;
     vertical-align: middle;
     width: 80%;
+}
+
+.catalogs-button:hover {
+    background-color: #2d2d2d;
+    color: #d73916;
 }
 
 
@@ -54,10 +60,16 @@ main {
 
 .gender a {
     width: 33.33%;
+    height: 100%;
     text-align: center;
     display: table-cell;
     vertical-align: middle;
-    height: 100%;
+    transition: 0.5s;
+}
+
+.gender a:hover {
+    background-color: #2d2d2d;
+    color: #d73916;
 }
 
 .cart {
@@ -67,6 +79,7 @@ main {
     padding: 1%;
     display: table;
     background-color: #333333;
+    transition: 0.5s;
 }
 
 .cart * {
@@ -78,6 +91,10 @@ main {
     vertical-align: middle;
 }
 
+.cart:hover {
+    background-color: #2d2d2d;
+    color: #d73916;
+}
 
 .catalogs {
     left: 0;
