@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/store.css">
+    <link rel="stylesheet" href="styles/main-styles.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <title>Король и Шут</title>
+</head>
+<body>
+    <!-- загрузка -->
+    <!-- <div id="loader">
+        <img src="images/loader_image.jpeg" alt="">
+        <h1>Загрузка...</h1>
+    </div> -->
+
+    <!-- скрол к наву --> 
+    <button href="#" id="scroll-to-top"><img src="images/arrow-up.svg" alt=""></button>
+
+    <header>
+        <nav>
+            <a href="main.html" class="nav-logo"><img src="images/logo.svg" alt=""></a>
+            <div class="desktop nav-buttons">
+                <a href="discography.html" class="nav-button">Дискография</a>
+                <a href="biography/gorshok.html" class="nav-button">Горшок</a>
+                <a href="all-members.html" class="nav-button">Участники</a>
+                <a href="gallery.html" class="nav-button">Галлерея</a>
+            </div>
+
+            <button><img src="images/menu.svg" alt="" onclick="OpenCloseNavbar()"></button>
+            <!-- open navbuttons -->
+            <div class="mobile" id="">
+                <a href="discography.html" class="nav-button">Дискография</a>
+                <a href="biography/gorshok.html" class="nav-button">Горшок</a>
+                <a href="all-members.html" class="nav-button">Участники</a>
+                <a href="gallery.html" class="nav-button">Галлерея</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="parametrs">
+            <button class="catalogs-button">
+                <span><img src="images/menu.svg" alt=""></span>
+                <h3>Каталог</h3>
+                <span><img src="images/expand_more.svg" alt=""></span>
+            </button>
+            <nav class="catalogs hidden">
+                <div class="catalog">
+                    <span><img src="" alt=""></span>
+                    <h3>catalog1</h3>
+                </div>
+            </nav>
+
+            <div class="gender">
+                <a href="" class="mans active"><h3>Мужчинам</h3></a>
+                <a href="" class="womans"><h3>Женщинам</h3></a>
+                <a href="" class="childrens"><h3>Детям</h3></a>
+            </div>
+            <a class="cart">
+                <span>
+                    <img src="images/cart.svg" alt="">
+                </span>
+                <h3>В корзине 1 товар на 2699</h3>
+            </a>
+        </section>
+        <section class="products">
+            <div class="product-parametrs">
+                <div class="product-gender">
+                    <h3>
+                        <a href="" class="active">Мужчинам</a>/
+                        <a href="">Женщинам</a>/
+                        <a href="">Мальчикам</a>/
+                        <a href="">Девочкам</a>
+                    </h3>
+                </div>
+            </div>
+            <hr>
+            <div class="directory">
+                <h3>
+                    <a href="" class="active">Главная</a>/
+                    <a href="">Мужская одежда</a>
+                </h3>
+            </div>
+            <div class="cards">
+                <a href="dsadas" class="card">
+                    <img src="https://store.kish.su/upload/thumb/images/77/77b349aaj7ef_320x0.jpg" alt="">
+                    <h3>2699 руб.</h3>
+                    <p>
+                        Король и Шут
+                        Мужское худи
+                    </p>
+                </a>
+            </div>
+            <h3>
+                <div class="bottom-parametrs">
+                    <div class="output">
+                            <span>Выводить по:</span> 
+                            <a href="" class="active">20</a> 
+                            <a href="">40</a> 
+                            <a href="">100</a>
+                    </div>
+                    <div class="page-number">
+                        <a href="" class="arrow"><img src="images/arrow-back.svg" alt=""></a>
+                        <a href="" class="active">1</a>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="">4</a>
+                        <p>...</p>
+                        <a href="">6</a>
+                        <a href="" class="arrow"><img src="images/arrow-forward.svg" alt=""></a>
+                    </div>
+                </div>
+            </h3>
+        </section>
+    </main>
+    <footer>
+        <h4 class="questions">
+            <a href="">Доставка и оплата</a>
+            <a href="">Обмен и возврат</a>
+            <a href="">Где мой заказ?</a>
+            <a href="">FAQ</a>
+        </h4>
+        <hr>
+        <img src="images/pay.svg" class="pay-cards">
+        <h4>Вы можете оплатить заказ наличными при получении</h4>
+        <h4>Архивы "Король и Шут"</h4>
+    </footer>
+    <script src="main.js"></script>
+    <script src="main-scripts.js"></script>
+</body>
+</html>

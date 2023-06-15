@@ -1,0 +1,208 @@
+main {
+    width: 1876px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1876px) {
+    main {
+        width: 100%;
+    }
+}
+
+.parametrs {
+    display: flex;   
+    justify-content: space-between;
+    color: #fff;
+}
+
+.active {
+    background-color: #333333;
+    color: rgb(255,203,112);
+}
+
+.parametrs * {
+    border-radius: 2px;
+}
+
+.catalogs-button {
+    width: 20%;
+    margin: 20px;
+    margin-left: 30px;
+    padding: 1%;
+    display: table;
+    justify-content: space-between;
+    background-color: #333333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.catalogs-button span {
+    display: table-cell;
+    width: 20%
+}
+
+.catalogs-button h3 {
+    display: table-cell;
+    vertical-align: middle;
+    width: 80%;
+}
+
+
+.gender {
+    margin: 20px;
+    display: table;
+    width: 50%;
+    border: 2px solid #333333;
+    background-color: none;
+    
+}
+
+.gender a {
+    width: 33.33%;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.cart {
+    width: 20%;
+    margin: 20px;
+    margin-right: 30px;
+    padding: 1%;
+    display: table;
+    background-color: #333333;
+}
+
+.cart * {
+
+    display: table-cell;
+}
+
+.cart h3 {
+    vertical-align: middle;
+}
+
+
+
+/* products */
+.products {
+    background-color: #fff;
+    color: black;
+    margin: 40px;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.products a{
+    background: none;
+    color: black;
+}
+
+.products .active {
+    background: none;
+    color: #d73916;
+}
+
+.products h3 {
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+.cards {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.card {
+    display: inline-block;
+    text-align: center;
+    width: 22%;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 1%;
+}
+
+.card:hover {
+    color: #d73916;
+    background-color: black;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card p {
+    margin: 0;
+    color: #aaa;
+}
+
+.bottom-parametrs {
+    width: 100%;
+    margin-top: 5%;
+    color: #aaa;
+    display: flex;
+    justify-content:space-between;
+}
+
+.bottom-parametrs a{
+    color: #aaa;
+    transition: 0.5s;
+}
+
+.bottom-parametrs a:hover {
+    color: #d73916;
+}
+
+.output {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-number {
+    width: 25%;
+    text-align: center;
+    display: table;
+    justify-content: space-between;
+}
+
+.page-number * {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.arrow {
+    width: 10%
+}
+
+.page-number img {
+    width: 100%;
+}
+
+.questions {
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.questions a{ 
+    color: #aaa;
+}
+
+.pay-cards {
+    width: 600px;
+}
+
+@media (max-width: 600px) {
+    .pay-cards {
+        width: 90%;
+    }
+    .questions {
+        width: 90%;
+    }
+}
