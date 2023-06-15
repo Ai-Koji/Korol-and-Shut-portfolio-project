@@ -41,30 +41,61 @@
     </header>
     <main>
         <section class="parametrs">
-            <button class="catalogs-button">
+            <button class="catalogs-button" onclick="openCloseCatalogList()">
                 <span><img src="images/menu.svg" alt=""></span>
                 <h3>Каталог</h3>
-                <span><img src="images/expand_more.svg" alt=""></span>
+                <span><img src="images/expand_more.svg" alt="" id="expand"></span>
             </button>
-            <nav class="catalogs hidden">
-                <div class="catalog">
-                    <span><img src="" alt=""></span>
-                    <h3>catalog1</h3>
-                </div>
-            </nav>
-
             <div class="gender">
                 <a href="" class="mans active"><h3>Мужчинам</h3></a>
                 <a href="" class="womans"><h3>Женщинам</h3></a>
                 <a href="" class="childrens"><h3>Детям</h3></a>
             </div>
-            <a class="cart">
+            <a href="" class="cart">
                 <span>
                     <img src="images/cart.svg" alt="">
                 </span>
                 <h3>В корзине 1 товар на 2699</h3>
             </a>
         </section>
+
+        <nav class="catalogs">
+            <div class="catalogs-list">
+                <a href="" class="catalog">
+                    <img src="https://store.kish.su/upload/thumb/images/77/77b349aaj7ef_320x0.jpg" alt="">
+                    <h3>catalog1</h3>
+                </a>
+                <a href="" class="catalog">
+                    <img src="https://store.kish.su/upload/thumb/images/77/77b349aaj7ef_320x0.jpg" alt="">
+                    <h3>catalog2</h3>
+                </a>
+                <a href="" class="catalog">
+                    <img src="https://store.kish.su/upload/thumb/images/77/77b349aaj7ef_320x0.jpg" alt="">
+                    <h3>catalog3</h3>
+                </a>
+                <a href="" class="catalog">
+                    <img src="https://store.kish.su/upload/thumb/images/77/77b349aaj7ef_320x0.jpg" alt="">
+                    <h3>catalog4</h3>
+                </a>
+                <a href="" class="catalog">
+                    <img src="https://store.kish.su/upload/thumb/images/77/77b349aaj7ef_320x0.jpg" alt="">
+                    <h3>catalog4</h3>
+                </a>
+                <a href="" class="catalog">
+                    <img src="https://store.kish.su/upload/thumb/images/77/77b349aaj7ef_320x0.jpg" alt="">
+                    <h3>catalog4</h3>
+                </a>
+                <a href="" class="catalog">
+                    <img src="https://store.kish.su/upload/thumb/images/77/77b349aaj7ef_320x0.jpg" alt="">
+                    <h3>catalog4</h3>
+                </a>
+                <a href="" class="catalog">
+                    <img src="https://store.kish.su/upload/thumb/images/77/77b349aaj7ef_320x0.jpg" alt="">
+                    <h3>catalog4</h3>
+                </a>
+            </div>
+        </nav>
+
         <section class="products">
             <div class="product-parametrs">
                 <div class="product-gender">
@@ -127,7 +158,7 @@
         <h4>Вы можете оплатить заказ наличными при получении</h4>
         <h4>Архивы "Король и Шут"</h4>
     </footer>
-    <script src="main.js"></script>
+    <script src="store.js"></script>
     <script src="main-scripts.js"></script>
 </body>
 </html>
