@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/gallery.css">
-    <link rel="stylesheet" href="styles/main-styles.css">
+    <link rel="stylesheet" href="/static/styles/gallery.css">
+    <link rel="stylesheet" href="/static/styles/main-styles.css">
     <link rel="shortcut icon" href="images/favicon.ico">
     <title>Король и Шут</title>
 </head>
 <body>
     <!-- загрузка -->
     <div id="loader">
-        <img src="images/loader_image.jpeg" alt="">
+        <img src="/static/images/loader_image.jpeg" alt="">
         <h1>Загрузка...</h1>
     </div>
 
     <!-- скрол к наву -->
-    <button href="#" id="scroll-to-top"><img src="images/arrow-up.svg" alt=""></button>
+    <button href="#" id="scroll-to-top"><img src="/static/images/arrow-up.svg" alt=""></button>
     
     <header>
         <nav>
-            <a href="main.html" class="nav-logo"><img src="images/logo.svg" alt=""></a>
+            <a href="main.html" class="nav-logo"><img src="/static/images/logo.svg" alt=""></a>
             <div class="desktop nav-buttons">
                 <a href="discography.html" class="nav-button">Дискография</a>
                 <a href="biography/gorshok.html" class="nav-button">Горшок</a>
@@ -29,7 +29,7 @@
                 <a href="gallery.html" class="nav-button active">Галлерея</a>
             </div>
 
-            <button><img src="images/menu.svg" alt="" onclick="OpenCloseNavbar()"></button> <!-- open navbuttons -->
+            <button><img src="/static/images/menu.svg" alt="" onclick="OpenCloseNavbar()"></button> <!-- open navbuttons -->
             <div class="mobile" id="">
                 <a href="discography.html" class="nav-button">Дискография</a>
                 <a href="biography/gorshok.html" class="nav-button">Горшок</a>
@@ -142,7 +142,7 @@
 
         <!-- увеличение картинки -->
         <div class="enlarged-image hidden">
-            <button id="close"><img src="images/close.svg"></button>
+            <button id="close"><img src="/static/images/close.svg"></button>
             <img id="enlarged-image" src="">
         </div>
 
@@ -150,19 +150,19 @@
         <!-- участники группы -->
         <h1>Участники группы</h1>
         <section class="members">
-            <a href="biography/gorshok.html" title="Михаил Горшенев"><img src="images/members/mihail-gorshenev.jpg"></a>
-            <a href="biography/aleksandr-shhigolev.html" title="Александр Щиголев"><img src="images/members/aleksandr-shhigolev.jpg" alt=""></a>
-            <a href="biography/yakov-tsvirkunov.html" title="Яков Цвиркунов"><img src="images/members/yakov-tsvirkunov.jpg" alt=""></a>
-            <a href="biography/aleksandr-leontev.html" title="Александр Леонтьев"><img src="images/members/aleksandr-leontev.jpg" alt=""></a>
-            <a href="biography/pavel-sazhinov.html" title="Павел Сажинов"><img src="images/members/pavel-sazhinov.jpg" alt=""></a>
-            <a href="biography/sergey-zaharov.html" title="Сергей Захаров"><img src="images/members/sergey-zaharov.jpg" alt=""></a>
+            <a href="biography/gorshok.html" title="Михаил Горшенев"><img src="/static/images/members/mihail-gorshenev.jpg"></a>
+            <a href="biography/aleksandr-shhigolev.html" title="Александр Щиголев"><img src="/static/images/members/aleksandr-shhigolev.jpg" alt=""></a>
+            <a href="biography/yakov-tsvirkunov.html" title="Яков Цвиркунов"><img src="/static/images/members/yakov-tsvirkunov.jpg" alt=""></a>
+            <a href="biography/aleksandr-leontev.html" title="Александр Леонтьев"><img src="/static/images/members/aleksandr-leontev.jpg" alt=""></a>
+            <a href="biography/pavel-sazhinov.html" title="Павел Сажинов"><img src="/static/images/members/pavel-sazhinov.jpg" alt=""></a>
+            <a href="biography/sergey-zaharov.html" title="Сергей Захаров"><img src="/static/images/members/sergey-zaharov.jpg" alt=""></a>
         </section>
         <a href="all-members.html" class="other-members">ВСЕ УЧАСТНИКИ</a>
 </main>
     <footer>
         <h4>Архивы "Король и Шут"</h4>
     </footer>
-    <script src="gallery.js"></script>
-    <script src="main-scripts.js"></script>
+    <script src="/static/scripts/gallery.js"></script>
+    <script src="/static/scripts/main-scripts.js"></script>
 </body>
 </html>

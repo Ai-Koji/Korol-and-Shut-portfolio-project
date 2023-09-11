@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/store.css">
-    <link rel="stylesheet" href="styles/main-styles.css">
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="/static/styles/store.css">
+    <link rel="stylesheet" href="/static/styles/main-styles.css">
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
     <title>Король и Шут</title>
 </head>
 <body>
     <!-- загрузка -->
     <div id="loader">
-        <img src="images/loader_image.jpeg" alt="">
+        <img src="/static/images/loader_image.jpeg" alt="">
         <h1>Загрузка...</h1>
     </div>
 
     <!-- скрол к наву --> 
-    <button href="#" id="scroll-to-top"><img src="images/arrow-up.svg" alt=""></button>
+    <button href="#" id="scroll-to-top"><img src="/static/images/arrow-up.svg" alt=""></button>
 
     <header>
         <nav>
-            <a href="main.html" class="nav-logo"><img src="images/logo.svg" alt=""></a>
+            <a href="main.html" class="nav-logo"><img src="/static/images/logo.svg" alt=""></a>
             <div class="desktop nav-buttons">
                 <a href="discography.html" class="nav-button">Дискография</a>
-                <a href="biography/gorshok.html" class="nav-button">Горшок</a>
+                <a href="gorshok.html" class="nav-button">Горшок</a>
                 <a href="all-members.html" class="nav-button">Участники</a>
                 <a href="gallery.html" class="nav-button">Галлерея</a>
             </div>
 
-            <button><img src="images/menu.svg" alt="" onclick="OpenCloseNavbar()"></button>
+            <button><img src="/static/images/menu.svg" alt="" onclick="OpenCloseNavbar()"></button>
             <!-- open navbuttons -->
             <div class="mobile" id="">
                 <a href="discography.html" class="nav-button">Дискография</a>
@@ -42,9 +42,9 @@
     <main>
         <section class="parametrs">
             <button class="catalogs-button" onclick="openCloseCatalogList()">
-                <span><img src="images/menu.svg" alt=""></span>
+                <span><img src="/static/images/menu.svg" alt=""></span>
                 <h3>Каталог</h3>
-                <span><img src="images/expand_more.svg" alt="" id="expand"></span>
+                <span><img src="/static/images/expand_more.svg" alt="" id="expand"></span>
             </button>
             <div class="gender">
                 <a href="" class="mans active"><h3>Мужчинам</h3></a>
@@ -53,7 +53,7 @@
             </div>
             <a href="" class="cart">
                 <span>
-                    <img src="images/cart.svg" alt="">
+                    <img src="/static/images/cart.svg" alt="">
                 </span>
                 <h3>В корзине 1 товар на 2699</h3>
             </a>
@@ -136,14 +136,14 @@
                             <a href="">100</a>
                     </div>
                     <div class="page-number">
-                        <a href="" class="arrow"><img src="images/arrow-back.svg" alt=""></a>
+                        <a href="" class="arrow"><img src="/static/images/arrow-back.svg" alt=""></a>
                         <a href="" class="active">1</a>
                         <a href="">2</a>
                         <a href="">3</a>
                         <a href="">4</a>
                         <p>...</p>
                         <a href="">6</a>
-                        <a href="" class="arrow"><img src="images/arrow-forward.svg" alt=""></a>
+                        <a href="" class="arrow"><img src="/static/images/arrow-forward.svg" alt=""></a>
                     </div>
                 </div>
             </h3>
@@ -157,11 +157,11 @@
             <a href="">FAQ</a>
         </h4>
         <hr>
-        <img src="images/pay.svg" class="pay-cards">
+        <img src="/static/images/pay.svg" class="pay-cards">
         <h4>Вы можете оплатить заказ наличными при получении</h4>
         <h4>Архивы "Король и Шут"</h4>
     </footer>
-    <script src="store.js"></script>
-    <script src="main-scripts.js"></script>
+    <script src="/static/scripts/store.js"></script>
+    <script src="/static/scripts/main-scripts.js"></script>
 </body>
 </html>
