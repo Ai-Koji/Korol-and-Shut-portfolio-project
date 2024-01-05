@@ -8,7 +8,6 @@ let mainCarousel = document.querySelector('.main-carousel');
 function showSlideMain() {
     document.removeEventListener('click', showSlideMain);
     // Находим активный слайд и скрываем его
-    console.log('dsadas')
     mainCarousel.removeEventListener("click", showSlideMain);
     let activeSlide = document.querySelector('#MainSlide' + (slideIdOfMainCarousel)); 
     activeSlide.classList.remove('carousel-opened');
@@ -45,7 +44,7 @@ const musicText = document.querySelector(".music-text p");
 const songs = [
   {
     title: "лесник",
-    image: "images/albums/korol-i-shut.jpg",
+    image: "/static/images/albums/korol-i-shut.jpg",
     audio: "audio/lesnik.mp3",
     text: `[Текст песни «Лесник»]
 
@@ -118,7 +117,7 @@ const songs = [
   },  
   {
     title: "Прыгну со скалы",
-    image: "images/albums/acoustic.jpg",
+    image: "/static/images/albums/acoustic.jpg",
     audio: "audio/scala.mp3",
     text: `[Текст песни «Прыгну со скалы»]
 
@@ -168,7 +167,7 @@ const songs = [
   },
   {
     title: "Джокер",
-    image: "images/albums/prodavets-koshmarov.jpg",
+    image: "/static/images/albums/prodavets-koshmarov.jpg",
     audio: "audio/djoker.mp3",
     text: `[Текст песни «Джокер»]
 
@@ -251,7 +250,7 @@ const songs = [
   },
   {
     title: "Кукла колдуна",
-    image: "images/albums/acoustic.jpg",
+    image: "/static/images/albums/acoustic.jpg",
     audio: "audio/cucla.mp3",
     text: `[Текст песни «Кукла колдуна»]
 
@@ -318,7 +317,7 @@ const songs = [
   },
   {
     title: "Валет и дама",
-    image: "images/albums/korol-i-shut.jpg",
+    image: "/static/images/albums/korol-i-shut.jpg",
     audio: "audio/valet-i-dama.mp3",
     text: `[Текст песни "Валет и Дама"]
 
