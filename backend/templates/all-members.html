@@ -41,134 +41,22 @@
     <main>
         <h1>Участники группы</h1>
         
-        <!-- участники последнего состава -->
-        <h2>Последний состав группы</h2>
-        <section class="group">
-            <a href="" class="member">
-                <div class="image">
-                    <img src="../static/images/members/mihail-gorshenev.jpg" alt="">
-                </div>
-                <div class="header">
-                    <h2>Михаил Горшенев</h2>
-                    <br>
-                    <h3>Вокал</h3>
-                </div>
-            </a>
-            <a href="" class="member">
-                <div class="image">
-                    <img src="../static/images/members/aleksandr-shhigolev.jpg" alt="">
-                </div>
-                <div class="header">
-                    <h2>Александр Щиголев</h2>
-                    <br>
-                    <h3>Ударные</h3>
-                </div>
-            </a>
-            <a href="" class="member">
-                <div class="image">
-                    <img src="../static/images/members/yakov-tsvirkunov.jpg" alt="">
-                </div>
-                <div class="header">
-                    <h2>Яков Цвиркунов</h2>
-                    <br>
-                    <h3>Гитара</h3>
-                </div>
-            </a>
-            <a href="" class="member">
-                <div class="image">
-                    <img src="../static/images/members/aleksandr-leontev.jpg" alt="">
-                </div>
-                <div class="header">
-                    <h2>Алексанлр Леонтьев</h2>
-                    <br>
-                    <h3>Гитара</h3>
-                </div>
-            </a>
-            <a href="" class="member">
-                <div class="image">
-                    <img src="../static/images/members/pavel-sazhinov.jpg" alt="">
-                </div>
-                <div class="header">
-                    <h2>Павел Сажинов</h2>
-                    <br>
-                    <h3>Клавишные</h3>
-                </div>
-            </a>
-            <a href="" class="member">
-                <div class="image">
-                    <img src="../static/images/members/sergey-zaharov.jpg" alt="">
-                </div>
-                <div class="header">
-                    <h2>Сергей Захаров</h2>
-                    <br>
-                    <h3>Бас</h3>
-                </div>
-            </a>
-        </section>
-
         <!-- бывшие участники -->
         <h2>Бывшие участники группы "Король и Шут"</h2>
+
         <section class="group">
-            <a href="" class="member">
-                <div class="image">
-                    <img src="../static/images/members/knyaz.jpg" alt="">
-                </div>
-                <div class="header">
-                    <h2>Андрей Князев</h2>
-                    <br>
-                    <h3>Вокал</h3>
-                </div>
-            </a>
-            <a href="" class="member">
-                <div class="image">
-                    <img src="../static/images/members/aleksandr-balunov.jpg" alt="">
-                </div>
-                <div class="header">
-                    <h2>Александр Балунов</h2>
-                    <br>
-                    <h3>Бас</h3>
-                </div>
-            </a>
-            <a href="" class="member">
-                <div class="image">
-                    <img src="../static/images/members/dmitriy-rishko.jpg" alt="">
-                </div>
-                <div class="header">
-                    <h2>Дмитрий Ришко</h2>
-                    <br>
-                    <h3>Скрипка</h3>
-                </div>
-            </a>
-            <a href="" class="member">
-                <div class="image">
-                    <img src="../static/images/members/Marya-Nefedova.jpeg" alt="">
-                </div>
-                <div class="header">
-                    <h2>Мария Нефедова</h2>
-                    <br>
-                    <h3>Скрипка</h3>
-                </div>
-            </a>
-            <a href="" class="member">
-                <div class="image">
-                    <img src="../static/images/members/aleksandr-kulikov.jpg" alt="">
-                </div>
-                <div class="header">
-                    <h2>Александр Куликов</h2>
-                    <br>
-                    <h3>Бас</h3>
-                </div>
-            </a>
-            <a href="" class="member">
-                <div class="image">
-                    <img src="../static/images/members/aleksey-gorshenev.jpg" alt="">
-                </div>
-                <div class="header">
-                    <h2>Алексей Горшенев</h2>
-                    <br>
-                    <h3>Ударные</h3>
-                </div>
-            </a>
+            {% for member in members %}
+                <a href="{{member.name}}" class="member">
+                    <div class="image">
+                        <img src="/media/{{member.image}}" alt="">
+                    </div>
+                    <div class="header">
+                        <h2>{{member.name}}</h2>
+                        <br>
+                        <h3>{{member.role}}</h3>
+                    </div>
+                </a>
+            {% endfor %}
         </section>
 
     </main>
