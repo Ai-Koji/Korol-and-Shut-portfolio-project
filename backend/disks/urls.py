@@ -4,4 +4,5 @@ from .views import *
 
 urlpatterns = [
     path('', main),
+    path('<str:name>/', disk)
 ]

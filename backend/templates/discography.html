@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/styles/discography.css">
-    <link rel="stylesheet" href="../static/styles/main-styles.css">
+    <link rel="stylesheet" href="/static/styles/discography.css">
+    <link rel="stylesheet" href="/static/styles/main-styles.css">
     <link rel="shortcut icon" href="images/favicon.ico">
     <title>Дискография</title>
 </head>
 <body>
     <!-- загрузка -->
     <div id="loader">
-        <img src="../static/images/loader_image.jpeg" alt="">
+        <img src="/static/images/loader_image.jpeg" alt="">
         <h1>Загрузка...</h1>
     </div>
 
     <!-- скрол к наву -->
-    <button href="#" id="scroll-to-top"><img src="../static/images/arrow-up.svg" alt=""></button>
+    <button href="#" id="scroll-to-top"><img src="/static/images/arrow-up.svg" alt=""></button>
     
     <header>
         <nav>
-            <a href="main.html" class="nav-logo"><img src="../static/images/logo.svg" alt=""></a>
+            <a href="main.html" class="nav-logo"><img src="/static/images/logo.svg" alt=""></a>
             <div class="desktop nav-buttons">
                 <a href="discography.html" class="nav-button active">Дискография</a>
                 <a href="biography/gorshok.html" class="nav-button">Горшок</a>
@@ -29,7 +29,7 @@
                 <a href="gallery.html" class="nav-button">Галлерея</a>
             </div>
 
-            <button><img src="../static/images/menu.svg" alt="" onclick="OpenCloseNavbar()"></button> <!-- open navbuttons -->
+            <button><img src="/static/images/menu.svg" alt="" onclick="OpenCloseNavbar()"></button> <!-- open navbuttons -->
             <div class="mobile" id="">
                 <a href="discography.html" class="nav-button active">Дискография</a>
                 <a href="biography/gorshok.html" class="nav-button">Горшок</a>
@@ -39,47 +39,40 @@
         </nav>
     </header>
     <main>
-        <!-- дискография -->
         <h1>Дискография</h1>
-        <section class="discography">
-            <a href="disks/sobranie.html" title="Акустический альбом — 17 песен"><img src="../static/images/albums/acoustic.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="Бунт на корабле — 14 песен"><img src="../static/images/albums/bunt-na-korable.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="Страшные Сказки — 20 песен"><img src="../static/images/albums/ctrashnyie-skazki.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="Ели Мясо Мужики — 19 песен"><img src="../static/images/albums/eli-myaso-muzhiki.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="Герои и Злодеи — 13 песен"><img src="../static/images/albums/geroi-i-zlodei.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="Как в старой сказке — 17 песен"><img src="../static/images/albums/kak-v-staroy-skazke.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="Камнем по Голове — 21 песен"><img src="../static/images/albums/kamnem-po-golove.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="Концерт в Олимпийском — 21 песен"><img src="../static/images/albums/kontsert-v-olimpiyskom.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="Король и Шут — 17 песен"><img src="../static/images/albums/korol-i-shut.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="Мёртвый Анархист — 33 песен"><img src="../static/images/albums/myortvyiy-anarhist.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="Праздник Скоморох — 21 песен"><img src="../static/images/albums/prazdnik-skomoroh.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="Продавец Кошмаров — 16 песен"><img src="../static/images/albums/prodavets-koshmarov.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="Собрание — 26 песен"><img src="../static/images/albums/sobranie.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="Страшные Истории. Том 1 — 19 песен"><img src="../static/images/albums/strashnyie-istorii-tom-1.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="Театр Демона — 12 песен"><img src="../static/images/albums/teatr-demona.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="Тень Клоуна — 16 песен"><img src="../static/images/albums/ten-klouna.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="TODD - Акт 1. «Праздник Крови» — 11 песен"><img src="../static/images/albums/todd-akt-1-prazdnik-krovi.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="TODD - Акт 2. «На Краю» — 10 песен"><img src="../static/images/albums/todd-akt-2-na-krayu.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="Жаль нет ружья! — 17 песен"><img src="../static/images/albums/zhal-net-ruzhya.jpg" alt=""></a>
-            <a href="disks/sobranie.html" title="Собрание! — 17 песен"><img src="../static/images/albums/sobranie.jpg" alt=""></a>
-        </section>
-
+        <!-- дискография -->
+        {% if main_disks %}
+            <section class="discography">
+                {% for disk in main_disks%}
+                    <a href="{{disk.name}}"><img src="/media/{{disk.main_image}}"></a>
+                {% endfor %}
+            </section>
+        {% endif %}
+        <!-- каверы -->
+        {% if cover_disks %}
+            <h1>Каверы</h1>
+            <section class="discography">
+                {% for cover in main_disks%}
+                    <a href="{{cover.name}}"><img src="/media/{{cover.main_image}}"></a>
+                {% endfor %}
+            </section>
+        {% endif %}
         
         <!-- участники группы -->
         <h1 style="color:rgb(255, 170, 22); padding-left: 100px; font-family: 'Old Standard TT', serif">Участники группы</h1>
         <section class="members">
-            <a href="biography/gorshok.html" title="Михаил Горшенев"><img src="../static/images/members/mihail-gorshenev.jpg"></a>
-            <a href="biography/aleksandr-shhigolev.html" title="Александр Щиголев"><img src="../static/images/members/aleksandr-shhigolev.jpg" alt=""></a>
-            <a href="biography/yakov-tsvirkunov.html" title="Яков Цвиркунов"><img src="../static/images/members/yakov-tsvirkunov.jpg" alt=""></a>
-            <a href="biography/aleksandr-leontev.html" title="Александр Леонтьев"><img src="../static/images/members/aleksandr-leontev.jpg" alt=""></a>
-            <a href="biography/pavel-sazhinov.html" title="Павел Сажинов"><img src="../static/images/members/pavel-sazhinov.jpg" alt=""></a>
-            <a href="biography/sergey-zaharov.html" title="Сергей Захаров"><img src="../static/images/members/sergey-zaharov.jpg" alt=""></a>
+            <a href="biography/gorshok.html" title="Михаил Горшенев"><img src="/static/images/members/mihail-gorshenev.jpg"></a>
+            <a href="biography/aleksandr-shhigolev.html" title="Александр Щиголев"><img src="/static/images/members/aleksandr-shhigolev.jpg" alt=""></a>
+            <a href="biography/yakov-tsvirkunov.html" title="Яков Цвиркунов"><img src="/static/images/members/yakov-tsvirkunov.jpg" alt=""></a>
+            <a href="biography/aleksandr-leontev.html" title="Александр Леонтьев"><img src="/static/images/members/aleksandr-leontev.jpg" alt=""></a>
+            <a href="biography/pavel-sazhinov.html" title="Павел Сажинов"><img src="/static/images/members/pavel-sazhinov.jpg" alt=""></a>
+            <a href="biography/sergey-zaharov.html" title="Сергей Захаров"><img src="/static/images/members/sergey-zaharov.jpg" alt=""></a>
         </section>
         <a href="all-members.html" class="other-members">ВСЕ УЧАСТНИКИ</a>
     </main>
     <footer>
         <h4>Архивы "Король и Шут"</h4>
     </footer>
-    <script src="../static/scripts/main-scripts.js"></script>
+    <script src="/static/scripts/main-scripts.js"></script>
 </body>
 </html>
