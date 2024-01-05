@@ -19,3 +19,11 @@ class Disk(models.Model):
     images = models.ManyToManyField(Image, blank=True)
     def __str__(self):
         return self.name
+
+class Cover(models.Model):
+    name = models.CharField(max_length=50)
+    about = models.TextField()
+    audio = models.ManyToManyField(Audio, blank=True)
+    images = models.ManyToManyField(Image, blank=True)
+    def __str__(self):
+        return self.name
