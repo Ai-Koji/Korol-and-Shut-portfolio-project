@@ -45,7 +45,7 @@ const songs = [
   {
     title: "лесник",
     image: "/static/images/albums/korol-i-shut.jpg",
-    audio: "audio/lesnik.mp3",
+    audio: "/media/audio/lesnik.mp3",
     text: `[Текст песни «Лесник»]
 
     [Куплет 1]
@@ -118,7 +118,7 @@ const songs = [
   {
     title: "Прыгну со скалы",
     image: "/static/images/albums/acoustic.jpg",
-    audio: "audio/scala.mp3",
+    audio: "/media/audio/scala.mp3",
     text: `[Текст песни «Прыгну со скалы»]
 
     [Куплет 1]
@@ -168,7 +168,7 @@ const songs = [
   {
     title: "Джокер",
     image: "/static/images/albums/prodavets-koshmarov.jpg",
-    audio: "audio/djoker.mp3",
+    audio: "/media/audio/djoker.mp3",
     text: `[Текст песни «Джокер»]
 
     [Интро]
@@ -251,7 +251,7 @@ const songs = [
   {
     title: "Кукла колдуна",
     image: "/static/images/albums/acoustic.jpg",
-    audio: "audio/cucla.mp3",
+    audio: "/media/audio/cucla.mp3",
     text: `[Текст песни «Кукла колдуна»]
 
     [Куплет 1]
@@ -318,7 +318,7 @@ const songs = [
   {
     title: "Валет и дама",
     image: "/static/images/albums/korol-i-shut.jpg",
-    audio: "audio/valet-i-dama.mp3",
+    audio: "/media/audio/valet-i-dama.mp3",
     text: `[Текст песни "Валет и Дама"]
 
     [Куплет]
