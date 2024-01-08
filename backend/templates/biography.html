@@ -51,9 +51,7 @@
         <h1 style="color:rgb(255, 170, 22); padding-left: 100px; font-family: 'Old Standard TT', serif">Участники группы</h1>
         <section class="members">
             {% for main_member in member_list%}
-                {% if main_member.is_main %}
-                    <a href="/biography/{{ main_member.name }}" title="{{ main_member.name }}"><img src="/media/{{ main_member.image }}"></a>
-                {% endif %}
+                <a href="/biography/{{ main_member.name }}" title="{{ main_member.name }}"><img src="/media/{{ main_member.image }}"></a>
             {% endfor %}
         </section>
         <a href="/biography/" class="other-members">ВСЕ УЧАСТНИКИ</a>
