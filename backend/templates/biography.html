@@ -50,14 +50,13 @@
         <!-- участники группы -->
         <h1 style="color:rgb(255, 170, 22); padding-left: 100px; font-family: 'Old Standard TT', serif">Участники группы</h1>
         <section class="members">
-            <a href="gorshok.html" title="Михаил Горшенев"><img src="../static/images/members/mihail-gorshenev.jpg"></a>
-            <a href="aleksandr-shhigolev.html" title="Александр Щиголев"><img src="../static/images/members/aleksandr-shhigolev.jpg" alt=""></a>
-            <a href="yakov-tsvirkunov.html" title="Яков Цвиркунов"><img src="../static/images/members/yakov-tsvirkunov.jpg" alt=""></a>
-            <a href="aleksandr-leontev.html" title="Александр Леонтьев"><img src="../static/images/members/aleksandr-leontev.jpg" alt=""></a>
-            <a href="pavel-sazhinov.html" title="Павел Сажинов"><img src="../static/images/members/pavel-sazhinov.jpg" alt=""></a>
-            <a href="sergey-zaharov.html" title="Сергей Захаров"><img src="../static/images/members/sergey-zaharov.jpg" alt=""></a>
+            {% for main_member in member_list%}
+                {% if main_member.is_main %}
+                    <a href="/biography/{{ main_member.name }}" title="{{ main_member.name }}"><img src="/media/{{ main_member.image }}"></a>
+                {% endif %}
+            {% endfor %}
         </section>
-        <a href="../all-members.html" class="other-members">ВСЕ УЧАСТНИКИ</a>
+        <a href="/biography/" class="other-members">ВСЕ УЧАСТНИКИ</a>
     </main>
     <footer>
         <h4>Архивы "Король и Шут"</h4>
