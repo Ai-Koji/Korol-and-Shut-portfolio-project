@@ -1,75 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'template.html' %}
+
+
+{% block styles %}
     <link rel="stylesheet" href="/static/styles/discography.css">
-    <link rel="stylesheet" href="/static/styles/main-styles.css">
-    <link rel="shortcut icon" href="images/favicon.ico">
+{% endblock %}
+
+{% block title %}
     <title>Дискография</title>
-</head>
-<body>
-    <!-- загрузка -->
-    <div id="loader">
-        <img src="/static/images/loader_image.jpeg" alt="">
-        <h1>Загрузка...</h1>
-    </div>
+{% endblock %}
 
-    <!-- скрол к наву -->
-    <button href="#" id="scroll-to-top"><img src="/static/images/arrow-up.svg" alt=""></button>
-    
-    <header>
-        <nav>
-            <a href="main.html" class="nav-logo"><img src="/static/images/logo.svg" alt=""></a>
-            <div class="desktop nav-buttons">
-                <a href="discography.html" class="nav-button active">Дискография</a>
-                <a href="biography/gorshok.html" class="nav-button">Горшок</a>
-                <a href="all-members.html" class="nav-button">Участники</a>
-                <a href="gallery.html" class="nav-button">Галлерея</a>
-            </div>
-
-            <button><img src="/static/images/menu.svg" alt="" onclick="OpenCloseNavbar()"></button> <!-- open navbuttons -->
-            <div class="mobile" id="">
-                <a href="discography.html" class="nav-button active">Дискография</a>
-                <a href="biography/gorshok.html" class="nav-button">Горшок</a>
-                <a href="all-members.html" class="nav-button">Участники</a>
-                <a href="gallery.html" class="nav-button">Галлерея</a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <h1>Дискография</h1>
-        <!-- дискография -->
-        {% if main_disks %}
-            <section class="discography">
-                {% for disk in main_disks%}
-                    <a href="{{disk.name}}"><img src="/media/{{disk.main_image}}"></a>
-                {% endfor %}
-            </section>
-        {% endif %}
-        <!-- каверы -->
-        {% if cover_disks %}
-            <h1>Каверы</h1>
-            <section class="discography">
-                {% for cover in main_disks%}
-                    <a href="{{cover.name}}"><img src="/media/{{cover.main_image}}"></a>
-                {% endfor %}
-            </section>
-        {% endif %}
-        
-        <!-- участники группы -->
-        <h1 style="color:rgb(255, 170, 22); padding-left: 100px; font-family: 'Old Standard TT', serif">Участники группы</h1>
-        <section class="members">
-            {% for main_member in member_list%}
-                <a href="/biography/{{ main_member.name }}" title="{{ main_member.name }}"><img src="/media/{{ main_member.image }}"></a>
+{% block content %}
+    <h1>Дискография</h1>
+    <!-- дискография -->
+    {% if main_disks %}
+        <section class="discography">
+            {% for disk in main_disks%}
+                <a href="{{disk.name}}"><img src="/media/{{disk.main_image}}"></a>
             {% endfor %}
         </section>
-        <a href="all-members.html" class="other-members">ВСЕ УЧАСТНИКИ</a>
-    </main>
-    <footer>
-        <h4>Архивы "Король и Шут"</h4>
-    </footer>
-    <script src="/static/scripts/main-scripts.js"></script>
-</body>
-</html>
+    {% endif %}
+    <!-- каверы -->
+    {% if cover_disks %}
+        <h1>Каверы</h1>
+        <section class="discography">
+            {% for cover in main_disks%}
+                <a href="{{cover.name}}"><img src="/media/{{cover.main_image}}"></a>
+            {% endfor %}
+        </section>
+    {% endif %}
+    
+    <!-- участники группы -->
+    <h1 style="color:rgb(255, 170, 22); padding-left: 100px; font-family: 'Old Standard TT', serif">Участники группы</h1>
+    <section class="members">
+        {% for main_member in member_list%}
+            <a href="/biography/{{ main_member.name }}" title="{{ main_member.name }}"><img src="/media/{{ main_member.image }}"></a>
+        {% endfor %}
+    </section>
+    <a href="all-members.html" class="other-members">ВСЕ УЧАСТНИКИ</a>
+{% endblock %}

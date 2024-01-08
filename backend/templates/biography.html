@@ -1,64 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/styles/member-biography.css">
-    <link rel="stylesheet" href="../static/styles/main-styles.css">
-    <link rel="shortcut icon" href="../static/images/favicon.ico">
-    <title>Александр Балунов</title>
-</head>
-<body>
-    <!-- loader -->
-    <div id="loader">
-        <img src="../static/images/loader_image.jpeg" alt="">
-        <h1>Загрузка...</h1>
-    </div>
-    
-    <!-- scroll up -->
-    <button href="#" id="scroll-to-top"><img src="../static/images/arrow-up.svg" alt=""></button>
-    
-    <header>
-        <nav>
-            <a href="../main.html" class="nav-logo"><img src="../static/images/logo.svg" alt=""></a>
-            <div class="desktop nav-buttons">
-                <a href="../discography.html" class="nav-button">Дискография</a>
-                <a href="../biography/gorshok.html" class="nav-button">Горшок</a>
-                <a href="../all-members.html" class="nav-button">Участники</a>
-                <a href="../gallery.html" class="nav-button">Галлерея</a>
-            </div>
+{% extends 'template.html' %}
 
-            <button><img src="../static/images/menu.svg" alt="" onclick="OpenCloseNavbar()"></button> <!-- open navbuttons -->
-            <div class="mobile" id="">
-                <a href="../discography.html" class="nav-button">Дискография</a>
-                <a href="gorshok.html" class="nav-button">Горшок</a>
-                <a href="../all-members.html" class="nav-button">Участники</a>
-                <a href="../gallery.html" class="nav-button">Галлерея</a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <h1>{{member.name}}</h1>
-        <h2>{{member.role}}</h2>
-        <section class="content">
-            <img src="/media/{{member.image}}" alt="">
-            <p>
-                {{member.about|safe}}
-            </p>
-        </section>
-        <!-- участники группы -->
-        <h1 style="color:rgb(255, 170, 22); padding-left: 100px; font-family: 'Old Standard TT', serif">Участники группы</h1>
-        <section class="members">
-            {% for main_member in member_list%}
-                <a href="/biography/{{ main_member.name }}" title="{{ main_member.name }}"><img src="/media/{{ main_member.image }}"></a>
-            {% endfor %}
-        </section>
-        <a href="/biography/" class="other-members">ВСЕ УЧАСТНИКИ</a>
-    </main>
-    <footer>
-        <h4>Архивы "Король и Шут"</h4>
-    </footer>
-    <script src="../static/scripts/main-scripts.js"></script>
-</body>
-</html>
+
+{% block styles %}
+    <link rel="stylesheet" href="../static/styles/member-biography.css">
+{% endblock %}
+
+{% block title %}
+    <title>Александр Балунов</title>
+{% endblock %}
+    
+{% block content %}
+    <h1>{{member.name}}</h1>
+    <h2>{{member.role}}</h2>
+    <section class="content">
+        <img src="/media/{{member.image}}" alt="">
+        <p>
+            {{member.about|safe}}
+        </p>
+    </section>
+    <!-- участники группы -->
+    <h1 style="color:rgb(255, 170, 22); padding-left: 100px; font-family: 'Old Standard TT', serif">Участники группы</h1>
+    <section class="members">
+        {% for main_member in member_list%}
+            <a href="/biography/{{ main_member.name }}" title="{{ main_member.name }}"><img src="/media/{{ main_member.image }}"></a>
+        {% endfor %}
+    </section>
+    <a href="/biography/" class="other-members">ВСЕ УЧАСТНИКИ</a>
+{% endblock %}
+

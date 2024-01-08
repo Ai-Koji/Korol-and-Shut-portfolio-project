@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    <link rel="stylesheet" href="/static/styles/main-styles.css">
+    {% block styles%}
+    {% endblock %}
+
+    {% block title %}
+    {% endblock %}
+
+</head>
+<body>
+    <!-- загрузка -->
+    <div id="loader">
+        <img src="/static/images/loader_image.jpeg" alt="">
+        <h1>Загрузка...</h1>
+    </div>
+
+    <!-- скрол к наву --> 
+    <button href="#" id="scroll-to-top"><img src="/static/images/arrow-up.svg" alt=""></button>
+
+    <header>
+        <nav>
+            <a href="/" class="nav-logo"><img src="/static/images/logo.svg" alt=""></a>
+            <div class="desktop nav-buttons">
+                <a href="/disks" class="nav-button">Дискография</a>
+                <a href="biography/gorshok" class="nav-button">Горшок</a>
+                <a href="/biography" class="nav-button">Участники</a>
+                <a href="/gallery" class="nav-button">Галлерея</a>
+            </div>
+
+            <button><img src="/static/images/menu.svg" alt="" onclick="OpenCloseNavbar()"></button>
+            <!-- open navbuttons -->
+            <div class="mobile" id="">
+                <a href="/disks" class="nav-button">Дискография</a>
+                <a href="biography/gorshok" class="nav-button">Горшок</a>
+                <a href="/biography" class="nav-button">Участники</a>
+                <a href="/gallery" class="nav-button">Галлерея</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <h4>Архивы "Король и Шут"</h4>
+    </footer>
+    <script src="/static/scripts/main.js"></script>
+    <script src="/static/scripts/main-scripts.js"></script>
+</body>
+</html>
