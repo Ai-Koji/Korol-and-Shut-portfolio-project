@@ -25,4 +25,5 @@ urlpatterns = [
     path("", main),
     path('disks/', include('disks.urls')),
     path('biography/', include('biography.urls')),
+    path('gallery/', include('gallery.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
