@@ -1,15 +1,15 @@
 h1 {
-    color:rgb(255, 170, 22);
+    color: rgb(255, 170, 22);
     padding-top: 20px;
-    padding-left: 50px; 
+    padding-left: 50px;
     font-family: 'Old Standard TT', serif;
     font-size: 30pt;
 }
 
 
 h2 {
-    color:#aaa;
-    padding-left: 75px; 
+    color: #aaa;
+    padding-left: 75px;
     font-family: 'Old Standard TT', serif;
     font-size: 22.5pt
 }
@@ -41,7 +41,7 @@ h3 {
 
 .member h2 {
     color: #d73916;
-    padding-left: 25px; 
+    padding-left: 25px;
     font-size: 20pt;
     margin-bottom: 0
 }
@@ -52,7 +52,7 @@ h3 {
 }
 
 .member h3 {
-    padding-left: 25px; 
+    padding-left: 25px;
     font-size: 15pt;
 }
 
@@ -66,7 +66,7 @@ h3 {
     overflow: hidden;
 }
 
-.image img{
+.image img {
     height: 200px;
     position: relative;
     left: 50%;
