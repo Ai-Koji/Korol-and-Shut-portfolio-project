@@ -78,6 +78,7 @@ p {
 #scroll-to-top {
     position: fixed;
     border-radius: 5px;
+    border: none;
     right: 40px;
     bottom: 40px;
     z-index: 100;

@@ -12,7 +12,7 @@ h1 {
 
 .discography a {
     display: inline-block;
-    width: auto;
+    width: 200px;
     margin-right: 500px;
     border-radius: 5%;
     margin: 3% 3%;
@@ -27,7 +27,7 @@ h1 {
 }
 
 .discography a img {
-    width: 15vw;
+    width: 100%;
     margin: 10px;
     margin: 0;
 }
