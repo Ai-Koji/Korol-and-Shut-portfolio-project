@@ -62,6 +62,7 @@ h2 {
 }
 
 /* gallery */
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -84,7 +85,7 @@ img {
       filter: blur(10px);
  }
   figure {
-      flex-basis: 33.333%;
+      flex-basis: 13%;
       height: auto;
       padding: 10px;
       overflow: hidden;
