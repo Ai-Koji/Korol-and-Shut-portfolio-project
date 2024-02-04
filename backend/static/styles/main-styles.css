@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&family=Roboto&display=swap');
+
 body {
     background-color: black;
     font-family: 'Roboto', sans-serif;
@@ -15,6 +16,7 @@ a {
 p {
     white-space: pre-line;
 }
+
 /* loader */
 
 #loader {
@@ -51,6 +53,7 @@ p {
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -64,15 +67,18 @@ p {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
+
 /* scroll up */
 
 #scroll-to-top {
     position: fixed;
     border-radius: 5px;
+    border: none;
     right: 40px;
     bottom: 40px;
     z-index: 100;
@@ -107,6 +113,7 @@ p {
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -116,10 +123,12 @@ p {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
+
 /* navbar */
 
 nav button {
@@ -142,6 +151,10 @@ nav {
     position: relative;
 }
 
+nav * {
+    margin: 5px;
+}
+
 .desktop .nav-button {
     height: 70%;
     padding: 10px;
@@ -153,7 +166,7 @@ nav {
 }
 
 nav .nav-logo img {
-    width: 100%;
+    height: 100%;
     position: absolute;
     top: 50%;
     left: 0;
@@ -167,7 +180,7 @@ nav .nav-logo img {
 }
 
 .nav-logo {
-    width: 20vw;
+    width: 100%;
     position: relative;
 }
 
@@ -194,22 +207,25 @@ nav a:hover {
     transition: color .2s ease-in-out;
 }
 
-@media (max-width: 983px) {
+@media (max-width: 1200px) {
     nav button {
         display: block;
     }
+
     .desktop {
         display: none;
     }
+
     .nav-logo {
         width: 30vw;
         position: relative;
     }
 }
-/* members */
 
+/* members */
 .members {
     width: 80%;
+    max-width: 1700px;
     text-align: center;
     margin: 0 auto;
     position: relative;
@@ -219,13 +235,13 @@ nav a:hover {
     display: inline-block;
     border-radius: 50%;
     overflow: hidden;
-    width: 20vw;
-    height: 20vw;
+    width: 300px;
+    height: 300px;
     margin: 30px;
 }
 
 .members img {
-    height: 20vw;
+    height: 100%;
     position: relative;
     top: 50%;
     left: 50%;
@@ -252,6 +268,7 @@ nav a:hover {
     color: white;
     background-color: #d73916;
 }
+
 /* footer */
 
 footer {
@@ -262,6 +279,7 @@ footer {
 footer h4 {
     color: #aaa;
 }
+
 /* увеличенное изображение */
 
 .enlarged-image {
@@ -307,6 +325,7 @@ footer h4 {
     .block.music {
         justify-content: center
     }
+
     .music-player {
         width: auto;
     }
@@ -316,6 +335,7 @@ footer h4 {
     .block.story .content {
         width: 60%;
     }
+
     .block.film .content {
         width: 100%;
         box-sizing: border-box;
@@ -323,20 +343,25 @@ footer h4 {
         padding: 0 5%;
         padding-right: 7%;
     }
+
     .block.film {
         display: flex;
         flex-direction: column-reverse;
     }
+
     .block.film .content p {
         margin: 0;
     }
+
     .block.film .images {
         width: 90%;
         margin: 0 auto;
     }
+
     .mobile-title {
         display: unset;
     }
+
     .block.film .content h1 {
         display: none;
     }
@@ -346,17 +371,21 @@ footer h4 {
     .music-text {
         width: 50%;
     }
+
     .block {
         margin-bottom: 25px;
     }
+
     .block.group-story {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .block.group-story .images {
         margin: 0;
     }
+
     .block.group-story .content {
         margin: 0;
         width: 100%;
@@ -364,6 +393,7 @@ footer h4 {
         padding-right: 7%;
         box-sizing: border-box;
     }
+
     .first-button,
     .second-button {
         width: 53px;
@@ -371,9 +401,11 @@ footer h4 {
         display: flex;
         align-items: center;
     }
+
     .discography-carousel {
         margin-bottom: 50px;
     }
+
     .other-members {
         margin: 0 auto;
         display: block;
@@ -387,10 +419,12 @@ footer h4 {
         flex-direction: column;
         align-items: center;
     }
+
     .block.story .images {
         margin: 0;
         width: 35%;
     }
+
     .block.story .content {
         width: 100%;
         margin: 0;
@@ -399,42 +433,52 @@ footer h4 {
         padding-right: 7%;
         margin-top: 10px;
     }
+
     .group-story .images {
         width: 60%;
     }
+
     .three-albums {
         display: inline-flex;
         flex-direction: column;
     }
+
     .three-albums a {
         width: fit-content;
         padding: 25px 30px;
         margin: 10px auto;
     }
+
     .three-albums a img {
         width: 150px;
     }
+
     .discography-title,
     .members-title {
         padding-left: 5% !important;
     }
+
     .members {
         gap: 25px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .members a {
         width: 200px;
         height: 200px;
         margin: 0;
     }
+
     .members img {
         height: 200px;
     }
+
     .other-members {
         margin-top: 25px;
     }
+
     .block.music {
         width: 100%;
         margin: 0;
@@ -442,6 +486,7 @@ footer h4 {
         box-sizing: border-box;
         margin-bottom: 50px;
     }
+
     .nav-logo {
         width: 200px;
         margin-left: 10px;
@@ -457,23 +502,28 @@ footer h4 {
         padding: 0 5%;
         box-sizing: border-box;
     }
+
     .music-player {
         width: 300px;
         margin: 0 auto;
         height: fit-content;
     }
+
     .music-text {
         width: 100%;
         margin: 0;
         height: 300px;
     }
+
     .change span {
         display: block;
         height: fit-content;
     }
+
     .change span img {
         margin: 0 !important;
     }
+
     .block.story .images {
         width: 50%;
     }
@@ -483,14 +533,17 @@ footer h4 {
     .group-story .images {
         width: 80%;
     }
+
     #scroll-to-top {
         width: 60px;
         height: 60px;
     }
+
     .nav-logo {
         width: 200px;
         margin-left: 10px;
     }
+
     .music-player {
         width: 90%;
     }

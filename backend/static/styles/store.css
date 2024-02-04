@@ -4,14 +4,14 @@ main {
 }
 
 .parametrs {
-    display: flex;   
+    display: flex;
     justify-content: space-between;
     color: #fff;
 }
 
 .active {
     background-color: #333333;
-    color: rgb(255,203,112);
+    color: rgb(255, 203, 112);
 }
 
 .parametrs * {
@@ -55,7 +55,7 @@ main {
     width: 50%;
     border: 2px solid #333333;
     background-color: none;
-    
+
 }
 
 .gender a {
@@ -139,23 +139,29 @@ main {
 
 .catalog h3 {
     width: 75%;
-} 
+}
 
 @keyframes expand {
     0% {
-        max-height: 0; /* Начальное значение при открытии списка */
+        max-height: 0;
+        /* Начальное значение при открытии списка */
     }
+
     100% {
-        max-height: 300px; /* Максимальное значение */
+        max-height: 300px;
+        /* Максимальное значение */
     }
 }
 
 @keyframes collapse {
     0% {
-        max-height: 300px; /* Начальное значение при закрытии списка */
+        max-height: 300px;
+        /* Начальное значение при закрытии списка */
     }
+
     100% {
-        max-height: 0; /* Скрываем */
+        max-height: 0;
+        /* Скрываем */
     }
 }
 
@@ -177,7 +183,7 @@ main {
     border-radius: 10px;
 }
 
-.products a{
+.products a {
     background: none;
     color: black;
 }
@@ -208,12 +214,12 @@ main {
     color: #d73916;
 }
 
-.product-parametrs a{
+.product-parametrs a {
     color: #aaa;
     transition: 0.5s;
 }
 
-.product-parametrs a:hover{
+.product-parametrs a:hover {
     color: #d73916;
 }
 
@@ -251,10 +257,10 @@ main {
     margin-top: 5%;
     color: #aaa;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
-.bottom-parametrs a{
+.bottom-parametrs a {
     color: #aaa;
     transition: 0.5s;
 }
@@ -296,7 +302,7 @@ main {
     justify-content: space-between;
 }
 
-.questions a{ 
+.questions a {
     color: #aaa;
 }
 
@@ -308,6 +314,7 @@ main {
     .pay-cards {
         width: 90%;
     }
+
     .questions {
         width: 90%;
     }
@@ -317,6 +324,7 @@ main {
     main {
         width: 100%;
     }
+
     .catalogs-list {
         width: 100%;
     }
