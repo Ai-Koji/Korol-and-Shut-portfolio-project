@@ -1,4 +1,3 @@
-
 // main-carousel
 let slideIdOfMainCarousel = 1;
 const maxIdOfMainCarousel = 5;
@@ -8,9 +7,11 @@ let mainCarousel = document.querySelector('.main-carousel');
 function showSlideMain() {
     document.removeEventListener('click', showSlideMain);
     // Находим активный слайд и скрываем его
-    console.log('dsadas')
-    mainCarousel.removeEventListener("click", showSlideMain);
-    let activeSlide = document.querySelector('#MainSlide' + (slideIdOfMainCarousel)); 
+    console.log('dsadas');
+    mainCarousel.removeEventListener('click', showSlideMain);
+    let activeSlide = document.querySelector(
+        '#MainSlide' + slideIdOfMainCarousel
+    );
     activeSlide.classList.remove('carousel-opened');
     activeSlide.classList.add('carousel-hidden');
 
@@ -21,33 +22,35 @@ function showSlideMain() {
     }
 
     // Запускаем переход на следующий слайд через 3 секунды
-    setTimeout(function() {
+    setTimeout(function () {
         activeSlide.classList.add('hidden');
     }, 3000);
-    
-    setTimeout(function() {
-      let newActiveSlide = document.querySelector('#MainSlide' + slideIdOfMainCarousel); 
-      newActiveSlide.classList.remove('hidden');
-      newActiveSlide.classList.remove('carousel-hidden');
-      newActiveSlide.classList.add('carousel-opened');
-      mainCarousel.addEventListener("click", showSlideMain);
-  }, 3100);
+
+    setTimeout(function () {
+        let newActiveSlide = document.querySelector(
+            '#MainSlide' + slideIdOfMainCarousel
+        );
+        newActiveSlide.classList.remove('hidden');
+        newActiveSlide.classList.remove('carousel-hidden');
+        newActiveSlide.classList.add('carousel-opened');
+        mainCarousel.addEventListener('click', showSlideMain);
+    }, 3100);
 }
 
-mainCarousel.addEventListener("click", showSlideMain);
+mainCarousel.addEventListener('click', showSlideMain);
 
 // плеер
-const player = document.querySelector("#player audio");
-const title = document.querySelector("#player h1");
-const image = document.querySelector("#player img");
-const musicText = document.querySelector(".music-text p");
+const player = document.querySelector('#player audio');
+const title = document.querySelector('#player h1');
+const image = document.querySelector('#player img');
+const musicText = document.querySelector('.music-text p');
 
 const songs = [
-  {
-    title: "лесник",
-    image: "images/albums/korol-i-shut.jpg",
-    audio: "audio/lesnik.mp3",
-    text: `[Текст песни «Лесник»]
+    {
+        title: 'лесник',
+        image: 'images/albums/korol-i-shut.jpg',
+        audio: 'audio/lesnik.mp3',
+        text: `[Текст песни «Лесник»]
 
     [Куплет 1]
     Замученный дорогой
@@ -114,13 +117,13 @@ const songs = [
     Множество историй
     Коль желаешь, расскажу
     Коль желаешь, расскажу
-    Коль желаешь, расскажу!`,
-  },  
-  {
-    title: "Прыгну со скалы",
-    image: "images/albums/acoustic.jpg",
-    audio: "audio/scala.mp3",
-    text: `[Текст песни «Прыгну со скалы»]
+    Коль желаешь, расскажу!`
+    },
+    {
+        title: 'Прыгну со скалы',
+        image: 'images/albums/acoustic.jpg',
+        audio: 'audio/scala.mp3',
+        text: `[Текст песни «Прыгну со скалы»]
 
     [Куплет 1]
     С головы сорвал ветер мой колпак
@@ -164,13 +167,13 @@ const songs = [
     И тогда себя возненавидишь ты
     Лишь осознав, кого ты потеряла
     Кого ты потеряла
-    Кого ты потеряла`,
-  },
-  {
-    title: "Джокер",
-    image: "images/albums/prodavets-koshmarov.jpg",
-    audio: "audio/djoker.mp3",
-    text: `[Текст песни «Джокер»]
+    Кого ты потеряла`
+    },
+    {
+        title: 'Джокер',
+        image: 'images/albums/prodavets-koshmarov.jpg',
+        audio: 'audio/djoker.mp3',
+        text: `[Текст песни «Джокер»]
 
     [Интро]
     Как же, Джокер, ты хитёр
@@ -247,13 +250,13 @@ const songs = [
     В-а-а-у!
     Их мечты развеем в прах
     Ты всегда в моих руках
-    О-о-о, о-о-о, о-о-о`,
-  },
-  {
-    title: "Кукла колдуна",
-    image: "images/albums/acoustic.jpg",
-    audio: "audio/cucla.mp3",
-    text: `[Текст песни «Кукла колдуна»]
+    О-о-о, о-о-о, о-о-о`
+    },
+    {
+        title: 'Кукла колдуна',
+        image: 'images/albums/acoustic.jpg',
+        audio: 'audio/cucla.mp3',
+        text: `[Текст песни «Кукла колдуна»]
 
     [Куплет 1]
     Тёмный, мрачный коридор
@@ -314,13 +317,13 @@ const songs = [
     
     [Аутро]
     Всё происходит, будто в страшном сне
-    И находиться здесь опасно мне!`,
-  },
-  {
-    title: "Валет и дама",
-    image: "images/albums/korol-i-shut.jpg",
-    audio: "audio/valet-i-dama.mp3",
-    text: `[Текст песни "Валет и Дама"]
+    И находиться здесь опасно мне!`
+    },
+    {
+        title: 'Валет и дама',
+        image: 'images/albums/korol-i-shut.jpg',
+        audio: 'audio/valet-i-dama.mp3',
+        text: `[Текст песни "Валет и Дама"]
 
     [Куплет]
     Шёл с улыбкой здоровяк по ночному парку
@@ -359,85 +362,84 @@ const songs = [
     
     [Оутро]
     "Весь в крови несчастный Валет, а над ним ужасная Дама
-    С ножом в руке!"`,
-  }
+    С ножом в руке!"`
+    }
 ];
 
 let currentSong = 0;
 
 function loadSong() {
-  title.innerText = songs[currentSong].title;
-  image.src = songs[currentSong].image;
-  player.src = songs[currentSong].audio;
-  musicText.innerText = songs[currentSong].text;
+    title.innerText = songs[currentSong].title;
+    image.src = songs[currentSong].image;
+    player.src = songs[currentSong].audio;
+    musicText.innerText = songs[currentSong].text;
 }
 
 function playSong() {
-  player.play();
-  document.querySelector("#play").innerHTML = "⏸";
+    player.play();
+    document.querySelector('#play').innerHTML = '⏸';
 }
 
 function pauseSong() {
-  player.pause();
-  document.querySelector("#play").innerHTML = "▶️";
+    player.pause();
+    document.querySelector('#play').innerHTML = '▶️';
 }
 
 function prevSong() {
-  currentSong--;
-  if (currentSong < 0) {
-    currentSong = songs.length - 1;
-  }
-  loadSong();
-  playSong();
+    currentSong--;
+    if (currentSong < 0) {
+        currentSong = songs.length - 1;
+    }
+    loadSong();
+    playSong();
 }
 
 function nextSong() {
-  currentSong++;
-  if (currentSong > songs.length - 1) {
-    currentSong = 0;
-  }
-  loadSong();
-  playSong();
+    currentSong++;
+    if (currentSong > songs.length - 1) {
+        currentSong = 0;
+    }
+    loadSong();
+    playSong();
 }
 
 loadSong();
 
-document.querySelector("#prev").addEventListener("click", prevSong);
-document.querySelector("#next").addEventListener("click", nextSong);
+document.querySelector('#prev').addEventListener('click', prevSong);
+document.querySelector('#next').addEventListener('click', nextSong);
 
-document.addEventListener("keydown", (e) => {
-  if (e.code === "ArrowLeft") {
-    prevSong();
-  } else if (e.code === "ArrowRight") {
-    nextSong();
-  }
+document.addEventListener('keydown', (e) => {
+    if (e.code === 'ArrowLeft') {
+        prevSong();
+    } else if (e.code === 'ArrowRight') {
+        nextSong();
+    }
 });
 
 // карусель альбомов
 let discIndex = 1;
 
-function prevDisc(){
-  let elements = document.getElementsByClassName("three-albums");
+function prevDisc() {
+    let elements = document.getElementsByClassName('three-albums');
 
-  if (discIndex == 1){
-    discIndex = 8;
-  }
-  discIndex--;
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].style.transform = `translateX(-${100 * (discIndex - 1)}vw)`;
-  }
+    if (discIndex == 1) {
+        discIndex = 8;
+    }
+    discIndex--;
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.transform = `translateX(-${100 * (discIndex - 1)}vw)`;
+    }
 }
 
-function nextDisc(){
-  let elements = document.getElementsByClassName("three-albums");
+function nextDisc() {
+    let elements = document.getElementsByClassName('three-albums');
 
-  
-  if (discIndex == 7){
-    discIndex = 0;
-  }
+    if (discIndex == 7) {
+        discIndex = 0;
+    }
 
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].style.transform = `translateX(-${100 * discIndex}vw)`;
-  }
-  discIndex++;
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.transform = `translateX(-${100 * discIndex}vw)`;
+    }
+    discIndex++;
 }
