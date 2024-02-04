@@ -16,9 +16,9 @@ h2 {
 }
 
 .content img {
-    width: 60%;
+    width: 900px;
     margin: 3%;
-    margin-left: 0;
+    margin-left: 3%;
 }
 
 @media (max-width:1000px) {
