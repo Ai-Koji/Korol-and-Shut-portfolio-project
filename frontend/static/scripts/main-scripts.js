@@ -1,10 +1,4 @@
-// scroll to top
-
-let button = document.getElementById('scroll-to-top');
-button.addEventListener('click', function () {
-    window.location.href = '#';
-});
-
+// urls for loader
 let links = document.getElementsByTagName('a');
 for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function (event) {
@@ -65,7 +59,7 @@ function scrollToTop() {
 
 document.getElementById('scroll-to-top').addEventListener('click', scrollToTop);
 
-// nav для мобильника
+// nav for mobile
 let isOpen = false;
 
 function OpenCloseNavbar() {
