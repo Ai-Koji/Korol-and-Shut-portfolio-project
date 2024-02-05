@@ -2,6 +2,7 @@
 .main-carousel {
     overflow: hidden;
     position: relative;
+    height: 800px;
 }
 
 .main-carousel img {
@@ -131,8 +132,6 @@
     padding: 0;
 }
 
-
-
 /* story */
 .block {
     width: 80%;
@@ -144,12 +143,12 @@
 
 .content {
     color: #aaa;
-    line-height: 22px
+    line-height: 22px;
 }
 
 .content h1 {
     color: #d73916;
-    font-family: 'Old Standard TT', serif
+    font-family: 'Old Standard TT', serif;
 }
 
 .content strong {
@@ -176,7 +175,6 @@
     margin: 5%;
     margin-right: 7%;
 }
-
 
 /* фильм */
 .film .images {
@@ -208,7 +206,7 @@
     text-align: center;
     vertical-align: top;
     animation-fill-mode: forwards;
-    transition: transform .5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .three-albums a {
@@ -219,7 +217,7 @@
     margin: 3% 3%;
     padding: 0.75%;
     background-color: rgba(255, 255, 255, 0.05);
-    transition: background-color .5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .three-albums a:hover {
@@ -232,14 +230,13 @@
     margin: 0;
 }
 
-
 .discography-carousel button {
     position: absolute;
     transform: translateY(-50%);
     border: none;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 100%;
-    transition: background-color .2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .discography-carousel button:hover {
@@ -272,7 +269,7 @@
     display: none;
 }
 
-
 @media (max-width: 1200px) {
-    .block {}
+    .block {
+    }
 }

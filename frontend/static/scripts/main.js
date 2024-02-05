@@ -34,7 +34,7 @@ function showSlideMain() {
         newActiveSlide.classList.remove('carousel-hidden');
         newActiveSlide.classList.add('carousel-opened');
         mainCarousel.addEventListener('click', showSlideMain);
-    }, 3100);
+    }, 3000);
 }
 
 mainCarousel.addEventListener('click', showSlideMain);
@@ -48,8 +48,8 @@ const musicText = document.querySelector('.music-text p');
 const songs = [
     {
         title: 'лесник',
-        image: 'images/albums/korol-i-shut.jpg',
-        audio: 'audio/lesnik.mp3',
+        image: '/frontend/static/images/albums/korol-i-shut.jpg',
+        audio: '/frontend/static/audio/lesnik.mp3',
         text: `[Текст песни «Лесник»]
 
     [Куплет 1]
@@ -121,8 +121,8 @@ const songs = [
     },
     {
         title: 'Прыгну со скалы',
-        image: 'images/albums/acoustic.jpg',
-        audio: 'audio/scala.mp3',
+        image: '/frontend/static/images/albums/acoustic.jpg',
+        audio: '/frontend/static/audio/scala.mp3',
         text: `[Текст песни «Прыгну со скалы»]
 
     [Куплет 1]
@@ -171,8 +171,8 @@ const songs = [
     },
     {
         title: 'Джокер',
-        image: 'images/albums/prodavets-koshmarov.jpg',
-        audio: 'audio/djoker.mp3',
+        image: '/frontend/static/images/albums/prodavets-koshmarov.jpg',
+        audio: '/frontend/static/audio/djoker.mp3',
         text: `[Текст песни «Джокер»]
 
     [Интро]
@@ -254,8 +254,8 @@ const songs = [
     },
     {
         title: 'Кукла колдуна',
-        image: 'images/albums/acoustic.jpg',
-        audio: 'audio/cucla.mp3',
+        image: '/frontend/static/images/albums/acoustic.jpg',
+        audio: '/frontend/static/audio/cucla.mp3',
         text: `[Текст песни «Кукла колдуна»]
 
     [Куплет 1]
@@ -321,8 +321,8 @@ const songs = [
     },
     {
         title: 'Валет и дама',
-        image: 'images/albums/korol-i-shut.jpg',
-        audio: 'audio/valet-i-dama.mp3',
+        image: '/frontend/static/images/albums/korol-i-shut.jpg',
+        audio: '/frontend/static/audio/valet-i-dama.mp3',
         text: `[Текст песни "Валет и Дама"]
 
     [Куплет]
@@ -417,29 +417,29 @@ document.addEventListener('keydown', (e) => {
 });
 
 // карусель альбомов
-let discIndex = 1;
+let discIndex = 0;
 
-function prevDisc() {
+function prevDisc(maxIndex) {
     let elements = document.getElementsByClassName('three-albums');
 
-    if (discIndex == 1) {
-        discIndex = 8;
+    if (discIndex == 0) {
+        discIndex = maxIndex;
     }
     discIndex--;
     for (var i = 0; i < elements.length; i++) {
-        elements[i].style.transform = `translateX(-${100 * (discIndex - 1)}vw)`;
+        elements[i].style.transform = `translateX(-${100 * (discIndex)}vw)`;
     }
 }
 
-function nextDisc() {
+function nextDisc(maxIndex) {
     let elements = document.getElementsByClassName('three-albums');
-
-    if (discIndex == 7) {
-        discIndex = 0;
+    console.log(discIndex)
+    if (discIndex == maxIndex - 1) {
+        discIndex = -1;
     }
 
+    discIndex++;
     for (var i = 0; i < elements.length; i++) {
         elements[i].style.transform = `translateX(-${100 * discIndex}vw)`;
     }
-    discIndex++;
 }

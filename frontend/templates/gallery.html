@@ -45,7 +45,7 @@
         <h1>Галлерея</h1>
         <h2>Концерты</h2>
         <div class="videos">
-            <button id="prevVideo"><img src="../static/images/arrow-prev.svg" alt=""></button>
+            <button id="prevVideo" onClick="moveVideos(-1, 6)"><img src="../static/images/arrow-prev.svg" alt=""></button>
             <div class="carousel">
                 <iframe src="https://www.youtube.com/embed/CQBZprU_Lb4" frameborder="0" width="100%"
                     height="800"></iframe>
@@ -60,7 +60,7 @@
                 <iframe src="https://www.youtube.com/embed/PHanv-bB_ZE" frameborder="0" width="100%"
                     height="800"></iframe>
             </div>
-            <button id="nextVideo"><img src="../static/images/arrow-next.svg" alt=""></button>
+            <button id="nextVideo" onClick="moveVideos(1, 6)"><img src="../static/images/arrow-next.svg" alt=""></button>
         </div>
         <h2>Фотографии</h2>
         <div class="images">

@@ -1,7 +1,6 @@
+// videos carousel
 const carousel = document.querySelector('.carousel');
 const videos = carousel.querySelectorAll('iframe');
-const prevBtn = document.querySelector('#prevVideo');
-const nextBtn = document.querySelector('#nextVideo');
 
 let currentIndex = 0;
 const videoWidth = videos[0].clientWidth;
@@ -10,10 +9,10 @@ const videoMarginRight = parseInt(
 );
 const videoTotalWidth = videoWidth + videoMarginRight;
 
-function moveVideos(direction) {
+function moveVideos(direction, maxIndex) {
     currentIndex += direction;
-    if (currentIndex == -1) currentIndex = 5;
-    else if (currentIndex == 6) currentIndex = 0;
+    if (currentIndex == -1) currentIndex = maxIndex - 1;
+    else if (currentIndex == maxIndex) currentIndex = 0;
 
     let translateX = -100 * currentIndex;
 
@@ -21,9 +20,6 @@ function moveVideos(direction) {
         video.style.transform = `translateX(${translateX}vw)`;
     });
 }
-
-prevBtn.addEventListener('click', () => moveVideos(-1));
-nextBtn.addEventListener('click', () => moveVideos(1));
 
 // gallery-image
 function EnlargeImage(index) {
