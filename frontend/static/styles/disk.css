@@ -41,6 +41,13 @@
 .other-albums img {
     width: 100%;
     border-radius: 10px;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.other-albums img:hover {
+    opacity: 0.4;
 }
 
 /* right */
@@ -84,6 +91,7 @@
     border: none;
     background-color: rgba(255, 255, 255, 0.05);
     color: #d73916;
+    cursor: pointer;
     transition: color 0.2s ease-in-out;
 }
 
@@ -126,6 +134,8 @@
     .change-compozition {
         flex: 1;
         display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .change-compozition audio {
@@ -219,9 +229,4 @@
     transition-property: opacity;
     transition-duration: 1s;
     transition-timing-function: ease;
-    cursor: pointer;
-}
-
-.polygraphy img:hover {
-    opacity: 0.4;
 }

@@ -44,21 +44,3 @@ nextButton.addEventListener('click', () => {
     selectComposition(index);
 });
 selectComposition(currentIndex);
-
-// увеличение изображений
-function EnlargeImage(index) {
-    document.querySelector('#enlarged-image').src = srcList[index];
-    document.querySelector('.enlarged-image').classList.remove('hidden');
-}
-
-function ReduceImage() {
-    document.querySelector('.enlarged-image').classList.add('hidden');
-}
-
-let images = document.querySelectorAll('#polygraphy-image');
-let srcList = [];
-
-images.forEach((image) => {
-    srcList.push(image.src);
-});
-document.querySelector('#close').addEventListener('click', ReduceImage);
