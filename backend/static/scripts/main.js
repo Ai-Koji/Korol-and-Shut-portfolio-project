@@ -416,29 +416,28 @@ document.addEventListener('keydown', (e) => {
 });
 
 // карусель альбомов
-let discIndex = 0;
+let diskIndex = 0;
 
 function prevDisc(maxIndex) {
     let elements = document.getElementsByClassName('three-albums');
 
-    if (discIndex == 0) {
-        discIndex = maxIndex;
+    if (diskIndex == 0) {
+        diskIndex = maxIndex;
     }
-    discIndex--;
+    diskIndex--;
     for (var i = 0; i < elements.length; i++) {
-        elements[i].style.transform = `translateX(-${100 * (discIndex)}vw)`;
+        elements[i].style.transform = `translateX(-${100 * (diskIndex)}vw)`;
     }
 }
 
 function nextDisc(maxIndex) {
     let elements = document.getElementsByClassName('three-albums');
-    console.log(discIndex)
-    if (discIndex == maxIndex - 1) {
-        discIndex = -1;
+    if (diskIndex == maxIndex - 1) {
+        diskIndex = -1;
     }
 
-    discIndex++;
+    diskIndex++;
     for (var i = 0; i < elements.length; i++) {
-        elements[i].style.transform = `translateX(-${100 * discIndex}vw)`;
+        elements[i].style.transform = `translateX(-${100 * diskIndex}vw)`;
     }
 }

@@ -82,41 +82,15 @@
 
     <!-- карусель албомов -->
     <section class="discography-carousel">
-        <div class="three-albums">
-            <a href="discography.html" title="Акустический альбом — 17 песен"><img src="/static/images/albums/acoustic.jpg" alt=""></a>
-            <a href="discography.html" title="Бунт на корабле — 14 песен"><img src="/static/images/albums/bunt-na-korable.jpg" alt=""></a>
-            <a href="discography.html" title="Страшные Сказки — 20 песен"><img src="/static/images/albums/ctrashnyie-skazki.jpg" alt=""></a>
-        </div>
-        <div class="three-albums">
-            <a href="discography.html" title="Ели Мясо Мужики — 19 песен"><img src="/static/images/albums/eli-myaso-muzhiki.jpg" alt=""></a>
-            <a href="discography.html" title="Герои и Злодеи — 13 песен"><img src="/static/images/albums/geroi-i-zlodei.jpg" alt=""></a>
-            <a href="discography.html" title="Как в старой сказке — 17 песен"><img src="/static/images/albums/kak-v-staroy-skazke.jpg" alt=""></a>
-        </div>
-        <div class="three-albums">
-            <a href="discography.html" title="Камнем по Голове — 21 песен"><img src="/static/images/albums/kamnem-po-golove.jpg" alt=""></a>
-            <a href="discography.html" title="Концерт в Олимпийском — 21 песен"><img src="/static/images/albums/kontsert-v-olimpiyskom.jpg" alt=""></a>
-            <a href="discography.html" title="Король и Шут — 17 песен"><img src="/static/images/albums/korol-i-shut.jpg" alt=""></a>
-        </div>
-        <div class="three-albums">
-            <a href="discography.html" title="Мёртвый Анархист — 33 песен"><img src="/static/images/albums/myortvyiy-anarhist.jpg" alt=""></a>
-            <a href="discography.html" title="Праздник Скоморох — 21 песен"><img src="/static/images/albums/prazdnik-skomoroh.jpg" alt=""></a>
-            <a href="discography.html" title="Продавец Кошмаров — 16 песен"><img src="/static/images/albums/prodavets-koshmarov.jpg" alt=""></a>
-        </div>
-        <div class="three-albums">
-            <a href="discography.html" title="Собрание — 26 песен"><img src="/static/images/albums/sobranie.jpg" alt=""></a>
-            <a href="discography.html" title="Страшные Истории. Том 1 — 19 песен"><img src="/static/images/albums/strashnyie-istorii-tom-1.jpg" alt=""></a>
-            <a href="discography.html" title="Театр Демона — 12 песен"><img src="/static/images/albums/teatr-demona.jpg" alt=""></a>
-        </div>
-        <div class="three-albums">
-            <a href="discography.html" title="Тень Клоуна — 16 песен"><img src="/static/images/albums/ten-klouna.jpg" alt=""></a>
-            <a href="discography.html" title="TODD - Акт 1. «Праздник Крови» — 11 песен"><img src="/static/images/albums/todd-akt-1-prazdnik-krovi.jpg" alt=""></a>
-            <a href="discography.html" title="TODD - Акт 2. «На Краю» — 10 песен"><img src="/static/images/albums/todd-akt-2-na-krayu.jpg" alt=""></a>
-        </div>
-        <div class="three-albums">
-            <a href="discography.html" title="Жаль нет ружья! — 17 песен"><img src="/static/images/albums/zhal-net-ruzhya.jpg" alt=""></a>
-        </div>
-        <button class="first-button" onclick="prevDisc()"><img src="/static/images//arrow-back.svg" alt=""></button>
-        <button class="second-button" onclick="nextDisc()"><img src="/static/images//arrow-forward.svg" alt=""></button>
+        {% for three_albums in albums.list %}
+            <div class="three-albums">
+                {% for album in three_albums %}
+                    <a href="/disks/{{album.name}}"><img src="/media/{{album.main_image}}" alt=""></a>
+                {% endfor %}
+            </div>
+        {% endfor %}
+        <button class="first-button" onclick="prevDisc({{albums.length}})"><img src="/static/images//arrow-back.svg" alt=""></button>
+        <button class="second-button" onclick="nextDisc({{albums.length}})"><img src="/static/images//arrow-forward.svg" alt=""></button>
     </section>
 
     <!-- небольшие сведения о группе -->
