@@ -14,7 +14,7 @@
     <section class="blocks">
         <section class="left-blocks">
             <div class="image">
-                <img src="{{disk.main_image}}" alt="">
+                <img src="/media/{{disk.main_image}}" alt="">
             </div>
             <!-- о альбоме -->
             <div class="about-album">
@@ -48,7 +48,9 @@
                     </div>
                 </div>
                 <div class="composition-list">
-                    <button>Пьянка</button>
+                    {% for a in disk.audio.all %}
+                        <button data-src="/media/{{a.file}}">{{a.name}}</button>
+                    {% endfor %}
                 </div>
             </div>
 
@@ -77,4 +79,7 @@
         </section>
         <a href="/biography/" class="other-members">ВСЕ УЧАСТНИКИ</a>
     {% endif%}
+{% endblock %}
+{% block scripts %}
+    <script src="/static/scripts/disk.js"></script>
 {% endblock %}
