@@ -68,11 +68,13 @@
     </div>
 
     <!-- участники группы -->
-    <h1 style="color:rgb(255, 170, 22); padding-left: 100px; font-family: 'Old Standard TT', serif">Участники группы</h1>
-    <section class="members">
-        {% for main_member in member_list%}
-            <a href="/biography/{{ main_member.name }}" title="{{ main_member.name }}"><img src="/media/{{ main_member.image }}"></a>
-        {% endfor %}
-    </section>
-    <a href="../all-members.html" class="other-members">ВСЕ УЧАСТНИКИ</a>
+    {% if member_list|length > 0 %}
+        <h1 style="color:rgb(255, 170, 22); padding-left: 100px; font-family: 'Old Standard TT', serif" class="members-title">Участники группы</h1>
+        <section class="members">
+            {% for main_member in member_list%}
+                <a href="/biography/{{ main_member.name }}" title="{{ main_member.name }}"><img src="/media/{{ main_member.image }}"></a>
+            {% endfor %}
+        </section>
+        <a href="/biography/" class="other-members">ВСЕ УЧАСТНИКИ</a>
+    {% endif%}
 {% endblock %}
