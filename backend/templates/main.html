@@ -81,17 +81,19 @@
     <h1 style="color:rgb(255, 170, 22); padding-left: 100px; font-family: 'Old Standard TT', serif" class="discography-title">Дискография</h1>
 
     <!-- карусель албомов -->
-    <section class="discography-carousel">
-        {% for three_albums in albums.list %}
-            <div class="three-albums">
-                {% for album in three_albums %}
-                    <a href="/disks/{{album.name}}"><img src="/media/{{album.main_image}}" alt=""></a>
-                {% endfor %}
-            </div>
-        {% endfor %}
-        <button class="first-button" onclick="prevDisc({{albums.length}})"><img src="/static/images//arrow-back.svg" alt=""></button>
-        <button class="second-button" onclick="nextDisc({{albums.length}})"><img src="/static/images//arrow-forward.svg" alt=""></button>
-    </section>
+    {% if albums.length > 0 %}
+        <section class="discography-carousel">
+            {% for three_albums in albums.list %}
+                <div class="three-albums">
+                    {% for album in three_albums %}
+                        <a href="/disks/{{album.name}}"><img src="/media/{{album.main_image}}" alt=""></a>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            <button class="first-button" onclick="prevDisc({{albums.length}})"><img src="/static/images//arrow-back.svg" alt=""></button>
+            <button class="second-button" onclick="nextDisc({{albums.length}})"><img src="/static/images//arrow-forward.svg" alt=""></button>
+        </section>
+    {% endif %}
 
     <!-- небольшие сведения о группе -->
     <section class="block group-story">

@@ -10,28 +10,32 @@
 
 {% block content %}
     <h1>Галлерея</h1>
-    <h2>Концерты</h2>
-    <div class="videos">
-        <button id="prevVideo"><img src="/static/images/arrow-prev.svg" alt=""></button>
-        
-        <div class="carousel">   
-            {% for video in videos %}
-                <iframe src="{{video.url}}" frameborder="0" width="100%" height="800"></iframe>  
+    {% if video_list|length > 0 %}
+        <h2>Концерты</h2>
+        <div class="videos">
+            <button id="prevVideo"><img src="/static/images/arrow-prev.svg" alt=""></button>
+                <div class="carousel">   
+                    {% for video in video_list %}
+                        <iframe src="{{video.url}}" frameborder="0" width="100%" height="800"></iframe>  
+                    {% endfor %}
+                </div>
+
+            <button id="nextVideo"><img src="/static/images/arrow-next.svg" alt=""></button>
+        </div>
+    {% endif %}
+
+    
+    {% if image_list|length > 0 %}
+        <h2>Фотографии</h2>
+        <!-- галлерея -->
+        <div class="gallery">
+            {% for image in image_list %}
+                <figure onclick="EnlargeImage(0)">
+                    <img src="/media/{{image.image}}" id="image">
+                </figure>
             {% endfor %}
         </div>
-
-        <button id="nextVideo"><img src="/static/images/arrow-next.svg" alt=""></button>
-    </div>
-    <h2>Фотографии</h2>
-
-    <!-- галлерея -->
-    <div class="gallery">
-        {% for image in images %}
-            <figure onclick="EnlargeImage(0)">
-                <img src="/media/{{image.image}}" id="image">
-            </figure>
-        {% endfor %}
-    </div>
+    {% endif %}
 
     <!-- увеличение картинки -->
     <div class="enlarged-image hidden">

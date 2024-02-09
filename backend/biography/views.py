@@ -2,8 +2,8 @@ from django.shortcuts import render
 from .models import *
 
 def main(request):
-    members = list(Member.objects.all().values())
-    return render(request, "all-members.html", {"members": members})
+    member_list = Member.objects.filter(is_main=True)
+    return render(request, "all-members.html", {"members": member_list})
 
 def member(request, name):
     member_list = Member.objects.filter(is_main=True)
